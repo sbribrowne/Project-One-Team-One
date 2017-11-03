@@ -27,7 +27,7 @@
             method: "GET"
         }).done(function(response) {
             console.log(response);
-
+            $("#results").empty();
             for(var i=0; i<response.products.length; i++){
                 $("#results").append( "<p>" + response.products[i].name + "</p>" );
             }
