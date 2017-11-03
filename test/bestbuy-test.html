@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="search-input" /><button id="search">Search</button>
+    <div id="results"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var test;
+        var searchInput;
+        $("#search").on("click", function(){
+            searchInput = $("#search-input").val();
+        
+
+        var requestURL = "https://api.bestbuy.com/v1/products/8880044.json?apiKey=RRDFqF9yMBmlBXsaQx1TqHe6";
+        var requestURL2 = `https://api.bestbuy.com/v1/products((search=${searchInput}))?apiKey=RRDFqF9yMBmlBXsaQx1TqHe6&format=json`;
+
+         $.ajax({
+            url: requestURL2,
+            method: "GET"
+        }).done(function(response) {
+            console.log(response);
+
+            for(var i=0; i<response.products.length; i++){
+                $("#results").append( "<p>" + response.products[i].name + "</p>" );
+            }
+        });
+
+    });
+    </script>
+</body>
+</html>
