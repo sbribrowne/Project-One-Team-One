@@ -27,13 +27,29 @@
             method: "GET"
         }).done(function(response) {
             console.log(response);
+            test = response;
             $("#results").empty();
+            $("#results").append("<ul>");
             for(var i=0; i<response.products.length; i++){
-                $("#results").append( "<p>" + response.products[i].name + "</p>" );
+                var productLi = $("<li>");
+                productLi.append("<h2>" + response.products[i].name + "</h2>");
+                productLi.append(`<p><img src="${response.products[i].image}" alt="product" /></p>`);
+                productLi.append(`<p>${response.products[i].longDescription}</p>`);
+                $("#results").append( productLi );
             }
+            $("#results").append("</ul>");
         });
 
     });
     </script>
 </body>
 </html>
+
+<!--
+
+Image
+Description
+Release Date
+Product Rating 
+
+-->
