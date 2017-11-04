@@ -1,4 +1,4 @@
-# Project: **techGine** -- Product Search
+# Project: **techGine** -- Tech Product Review Search Aggregate
 
 ![techKid](assets/images/techKid.jpg)
 
@@ -19,7 +19,7 @@ ___
 
 ## Project Description:
 
-The project provides a one-stop platform to allow users to research and compare electronic and tech products across an array of APIs. Users can use the website to aggrevate product searches and generate reviews at ease. Reviews include customer ratings, YouTube videos and other useful information for the product.
+The project provides a one-stop platform to allow users to research and compare electronic and tech products across an array of APIs. Users can use the website to aggregate product searches and generate reviews at ease. Reviews include customer ratings, YouTube videos and other useful information for the product.
 
 ## Project Design:
 
