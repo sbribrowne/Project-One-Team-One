@@ -1,6 +1,6 @@
 # Project: **techGine**
 
-![techKid](images/techKid.jpg)
+![techKid](assets/images/techKid.jpg)
 ___
 
 **Description**:
