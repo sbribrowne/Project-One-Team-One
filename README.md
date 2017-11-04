@@ -1,5 +1,8 @@
 # Project: techGine Product Search
 
+![techKid](assets/images/techKid.jpg)
+___
+
 ## Team Members:
 * Sadé Browne
 * Jenn Chu
@@ -11,7 +14,10 @@
 
 The project provides a one-stop platform to allow users to research and compare electronic and tech products across an array of APIs. Users can use the website to aggrevate product searches and generate reviews at ease. Reviews include customer ratings, YouTube videos and other useful information for the product.
 
-## Project Wirefram Sketch:
+## Project Wireframe and Mood Board:
+
+![Project Wireframe](assets/images/productpage-01.png)
+![Mood Board](assets/images/Moodboard-ProjectOne-01.png)
 
 ## APIs in Use:
 * Best Buy API
