@@ -1,5 +1,8 @@
 # Project: techGine Product Search
 
+![techKid](assets/images/techKid.jpg)
+___
+
 ## Team Members:
 * Sadé Browne
 * Jenn Chu
