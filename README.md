@@ -1,9 +1,26 @@
-# Project: **techGine**
+# Project: techGine Product Search
 
 ![techKid](assets/images/techKid.jpg)
 ___
 
-**Description**:
+## Team Members:
+* Sadé Browne
+* Jenn Chu
+* Mark Kazanski
+* Alize Nguyen
+* Nicholas Sladden
 
-* Provides a search engine for tecnology and electronic products that aggregates three sources of reviews for a product
-    * Maybe add youtube videos for the searched product
+## Project Description:
+
+The project provides a one-stop platform to allow users to research and compare electronic and tech products across an array of APIs. Users can use the website to aggrevate product searches and generate reviews at ease. Reviews include customer ratings, YouTube videos and other useful information for the product.
+
+## Project Wirefram Sketch:
+
+## APIs in Use:
+* Best Buy API
+* News API
+* Twitter API
+* Walmart API
+* Youtube API
+
+## Project Task Breakdown:
