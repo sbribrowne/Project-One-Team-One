@@ -1,4 +1,7 @@
-# Project: Tech Product Search
+# Project: **techGine**
+
+![techKid](assets/images/techKid.jpg)
+___
 
 **Description**:
 
