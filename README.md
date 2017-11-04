@@ -1,14 +1,21 @@
-# Project: techGine Product Search
+# Project: **techGine** -- Product Search
 
 ![techKid](assets/images/techKid.jpg)
+
+## Contents:
+* [Team Members](#team-members)
+* [Project Description](#project-description)
+* [Project Design](#project-design)
+* [APIs in Use](#apis-in-use)
+* [Project Task Breakdown](#project-task-breakdown)
 ___
 
 ## Team Members:
-* Sadé Browne
+* Sadé Browne - GitHub Master
 * Jenn Chu
 * Mark Kazanski
 * Alize Nguyen
-* Nicholas Sladden
+* Nicholas Sladden - Project Manager
 
 ## Project Description:
 
@@ -30,3 +37,9 @@ The project provides a one-stop platform to allow users to research and compare 
 * Youtube API
 
 ## Project Task Breakdown:
+
+* **Web-page design and styling**: Alize (Nick as needed)
+* **Best Buy API Javascript and UPC generation**: Mark
+* **News API and Twitter API Javascript**: Sade
+* **Walmart API and YouTube API Javascript**: Jenn
+* **WebHose API Javascript**: Nick
