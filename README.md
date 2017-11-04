@@ -16,6 +16,8 @@ The project provides a one-stop platform to allow users to research and compare 
 
 ## Project Wirefram Sketch:
 
+![Project Wireframe](assets/images/wireframe-02.png)
+
 ## APIs in Use:
 * Best Buy API
 * News API
