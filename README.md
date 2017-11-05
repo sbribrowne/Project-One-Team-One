@@ -27,7 +27,8 @@ The project provides a one-stop platform to allow users to research and compare 
 ![Project Mood Board](assets/images/Moodboard-ProjectOne-01.png)
 
 ### WireFrame
-![Project Wireframe](assets/images/wireframe-02.png)
+![Project Main Page Wireframe](assets/images/wireframe-02.png)
+![Project Review Page Wireframe](assets/images/productpage-01.png)
 
 ## APIs in Use:
 * Best Buy API
