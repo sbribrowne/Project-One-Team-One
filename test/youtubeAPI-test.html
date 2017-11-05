@@ -17,7 +17,7 @@
       <input type="text" id="video-input"><br>
 
       <!-- This button will trigger our AJAX call -->
-      <input id="find-video" type="submit" value="video Search">
+      <input id="find-video" type="submit" value="Video Search">
     </form>
     <br>
     <!-- We'll be dumping our JSON contents in here -->
@@ -36,20 +36,20 @@
 
         // Here we grab the text from the input box
         var video = $("#video-input").val();
-
+        var videoReview = video + " review";
         // Here we construct our URL
         var apiKey = "AIzaSyDRYhEcoUXij_i30idvqakBVEEPSlkXKrk";
 
-        var queryURL = "http://api.walmartlabs.com/v1/search?query=" + video + "&format=json&apiKey=" + apiKey;
+        var queryURL = "https://www.googleapis.com/youtube/v3/search?&order=relevance&part=snippet&q=" + videoReview + "&key=" + apiKey;
         // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
         // and display it in the div with an id of movie-view
 
         // YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE
-        jQuery.ajaxPrefilter(function(options) {
-        if (options.crossDomain && jQuery.support.cors) {
-            options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
-        }
-        });
+        // jQuery.ajaxPrefilter(function(options) {
+        // if (options.crossDomain && jQuery.support.cors) {
+        //     options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+        // }
+        // });
         // =================================================================
 
         $.ajax({
@@ -58,9 +58,9 @@
         }).done(function(response) {
           console.log(queryURL);
           console.log(response);
-          $("#video-view-1").text("Name: " + response.items[1].name);
-          $("#video-view-2").text("Description: " + response.items[1].shortDescription);
-          $("#video-view-3").text("Customer Review: " + response.items[1].customerRating);
+          $("#video-view-1").text("Name: " + response.items[0].snippet.title);
+          $("#video-view-2").html("Video Link: <a href='https://www.youtube.com/watch?v=" + response.items[0].id.videoId + "'>Video</a>");
+          $("#video-view-3").html("<img src='" + response.items[0].snippet.thumbnails.default.url + "'>");
           //$("#video-view").text(JSON.stringify(response));
         });
 
