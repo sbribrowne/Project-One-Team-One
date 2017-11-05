@@ -1,18 +1,25 @@
-# Project: techGine Product Search
+# Project: **techGine** -- Tech Product Review Search Aggregate
 
 ![techKid](assets/images/techKid.jpg)
+
+## Contents:
+* [Team Members](#team-members)
+* [Project Description](#project-description)
+* [Project Design](#project-design)
+* [APIs in Use](#apis-in-use)
+* [Project Task Breakdown](#project-task-breakdown)
 ___
 
 ## Team Members:
-* Sadé Browne
+* Sadé Browne - GitHub Master
 * Jenn Chu
 * Mark Kazanski
 * Alize Nguyen
-* Nicholas Sladden
+* Nicholas Sladden - Project Manager
 
 ## Project Description:
 
-The project provides a one-stop platform to allow users to research and compare electronic and tech products across an array of APIs. Users can use the website to aggrevate product searches and generate reviews at ease. Reviews include customer ratings, YouTube videos and other useful information for the product.
+The project provides a one-stop platform to allow users to research and compare electronic and tech products across an array of APIs. Users can use the website to aggregate product searches and generate reviews at ease. Reviews include customer ratings, YouTube videos and other useful information for the product.
 
 ## Project Design:
 
@@ -30,3 +37,9 @@ The project provides a one-stop platform to allow users to research and compare 
 * Youtube API
 
 ## Project Task Breakdown:
+
+* **Web-page design and styling**: Alize (Nick as needed)
+* **Best Buy API Javascript and UPC generation**: Mark
+* **News API and Twitter API Javascript**: Sade
+* **Walmart API and YouTube API Javascript**: Jenn
+* **WebHose API Javascript**: Nick
