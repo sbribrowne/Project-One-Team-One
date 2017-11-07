@@ -55,6 +55,12 @@ h1, h2, h3 {
     font-size: 30px;
 }
 
+#product-input::placeholder {
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 5%;
+  }
+
 #product-btn:hover {
     background-color: #005170;
 }
