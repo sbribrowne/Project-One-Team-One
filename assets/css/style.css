@@ -102,14 +102,18 @@ h1, h2, h3 {
 }
 
 #left-icon {
-    font-size: 8em;
+    font-size: 10em;
     text-align: center;
-    padding-left: 32%;
+    padding-left: 42.5%;
+    margin-top: -3%;
 }
 
-#right-icon {
-    font-size: 8em;
+#about-description {
     text-align: center;
-    padding-left: 32%;
+    color: #101010;
+    width: 80%;
+    margin-top: -1%;
+    margin-bottom: 7%;
+    margin-left: auto;
+    margin-right: auto;
 }
-
