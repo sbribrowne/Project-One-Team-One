@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <input type="text" id="search-input" /><button id="search">Search</button>
+    <div id="results"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var test;
+        var searchInput;
+        $("#search").on("click", function(){
+            searchInput = $("#search-input").val();
+        
+
+        var requestURL = "https://api.bestbuy.com/v1/products/8880044.json?apiKey=RRDFqF9yMBmlBXsaQx1TqHe6";
+        var requestURL2 = `https://api.bestbuy.com/v1/products((search=${searchInput}))?apiKey=RRDFqF9yMBmlBXsaQx1TqHe6&format=json`;
+        var requestURL3 = `https://api.bestbuy.com/v1/products((search=${searchInput})&customerReviewCount>=1)?apiKey=RRDFqF9yMBmlBXsaQx1TqHe6&sort=customerReviewCount.dsc&format=json`;
+
+         $.ajax({
+            url: requestURL3,
+            method: "GET"
+        }).done(function(response) {
+            console.log(response);
+            test = response;
+            $("#results").empty();
+            $("#results").append("<ul>");
+            for(var i=0; i<response.products.length; i++){
+                var productLi = $("<li>");
+                productLi.append("<h2>" + response.products[i].name + "</h2>");
+                productLi.append(`<p><img src="${response.products[i].image}" alt="product" /></p>`);
+                productLi.append(`<p>${response.products[i].longDescription}</p>`);
+                productLi.append(`<p>Release date: ${response.products[i].startDate}</p>`);
+                productLi.append(`<p>Department: ${response.products[i].department}</p>`);
+                productLi.append(`<p>Customer rating <strong>${response.products[i].customerReviewAverage}</strong> out of <strong>${response.products[i].customerReviewCount}</strong> reviews.</p>`);
+                $("#results ul").append( productLi );
+            }
+            $("#results").append("</ul>");
+        });
+
+    });
+    </script>
+
+<style>
+        ul li{
+            list-style: none;
+            width: 43%;
+            float: left;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            border: 1px solid #999;
+            min-height: 630px;
+            padding: 2%;
+            background-color: #efefef;
+        }
+
+        ul li p img{ text-align: center; }
+    </style>
+</body>
+</html>
+
+<!--
+
+Image
+Description
+Release Date
+Product Rating 
+
+-->
