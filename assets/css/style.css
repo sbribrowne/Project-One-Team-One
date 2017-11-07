@@ -16,6 +16,7 @@ h1, h2, h3 {
 
 #product-title {
     letter-spacing: 10px;
+    font-size: 6em;
     text-align: center;
     color: #FFF9EE;
     padding-top: 10%;
@@ -87,12 +88,28 @@ h1, h2, h3 {
 /*About Section*/
 
 .about-title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-weight: 600;
-    color: #101010;
+    color: #8DB5C5;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 8%;
     font-size: 40px;
-    letter-spacing: 10px;
+    letter-spacing: 20px;
+}
+
+.about-icons {
+    color: #005170;
+}
+
+#left-icon {
+    font-size: 8em;
+    text-align: center;
+    padding-left: 32%;
+}
+
+#right-icon {
+    font-size: 8em;
+    text-align: center;
+    padding-left: 32%;
 }
 
