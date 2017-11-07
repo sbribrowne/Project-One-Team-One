@@ -21,7 +21,8 @@ var BestBuyAPI = {
             BestBuyAPI.firstProduct.releaseDate = response.products[0].startDate;
             BestBuyAPI.firstProduct.productRating = response.products[0].customerReviewAverage;
             BestBuyAPI.firstProduct.reviewsNum = response.products[0].customerReviewCount;
-            BestBuyAPI.firstProduct.UPC = response.products[0].upc;            
+            BestBuyAPI.firstProduct.UPC = response.products[0].upc;  
+                     
         });
         return BestBuyAPI.firstProduct;
     },
