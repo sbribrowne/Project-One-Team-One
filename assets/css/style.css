@@ -6,6 +6,7 @@ h1, h2, h3 {
     font-family: 'Anton', sans-serif;
 }
 
+/*Jumbotron + Elements*/
 .jumbotron {
     height: 675px;
     background: url(../images/jumbotronimg.png) center center no-repeat;
@@ -30,6 +31,17 @@ h1, h2, h3 {
 
 #product-input {
     width: 10%; 
+    margin-left: 43%;
+    background-color: white;
+    border-bottom: none;
+    margin-top: 2%;
+}
+
+#product-btn {
+    height: 100%;
+    background-color: #8DB5C5;
+    margin-left: -0.35%;
+    padding: 0.3% 1% 0.25% 1%;
 }
     
 /*Nav Bar - styling */
