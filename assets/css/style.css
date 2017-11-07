@@ -1,9 +1,30 @@
-.jumbotron {
-    height: 400px;
-    background-color: navajowhite;
+p {
+    font-family: 'Open Sans', sans-serif;
 }
 
-/*Nav Bar */
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+}
+
+.jumbotron {
+    height: 675px;
+    background: url(../images/jumbotronimg.png) center center no-repeat;
+    background-size: cover;
+    margin-top: -2%;
+}
+    
+/*Nav Bar - styling */
+.nav-wrapper {
+    background-color: #CB3526; 
+}
+
+#logo {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 10px;
+    margin-left: 4%;
+}
+
+/*Nav Bar - auto fill */
 #topbarsearch .input-field .prefix { 
     width:0rem !important;    
     }        
@@ -13,4 +34,5 @@
 .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content{
     margin-left: 1rem !important;
     }
+
 
