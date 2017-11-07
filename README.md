@@ -44,3 +44,15 @@ The project provides a one-stop platform to allow users to research and compare 
 * **News API and Twitter API Javascript**: Sade
 * **Walmart API and YouTube API Javascript**: Jenn
 * **WebHose API Javascript**: Nick
+
+## Code Notes
+Propsed product object:
+Product{
+        name
+        imageURL
+        description
+        releaseDate
+        productRating
+        reviewsNum
+        UPC
+    }
