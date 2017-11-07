@@ -8,10 +8,10 @@ h1, h2, h3 {
 
 /*Jumbotron + Elements*/
 .jumbotron {
-    height: 675px;
+    height: 650px;
     background: url(../images/jumbotronimg.png) center center no-repeat;
     background-size: cover;
-    margin-top: -2%;
+    margin-top: -4%;
 }
 
 #product-title {
@@ -68,8 +68,9 @@ h1, h2, h3 {
 #logo {
     font-family: 'Inconsolata', monospace;
     color: #FFF9EE;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin-left: 4%;
+    font-weight: 700;
 }
 
 /*Nav Bar - auto fill */
@@ -83,4 +84,15 @@ h1, h2, h3 {
     margin-left: 1rem !important;
     }
 
+/*About Section*/
+
+.about-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #101010;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
 
