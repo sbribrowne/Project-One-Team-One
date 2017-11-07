@@ -66,9 +66,9 @@ h1, h2, h3 {
   }
 
 #logo {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Inconsolata', monospace;
     color: #FFF9EE;
-    letter-spacing: 10px;
+    letter-spacing: 2px;
     margin-left: 4%;
 }
 
