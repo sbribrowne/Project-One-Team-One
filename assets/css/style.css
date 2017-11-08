@@ -195,7 +195,12 @@ h1, h2, h3 {
         height: 600px;
     }
 
+    #product-title {
+        font-size: 5em;
+    }
+
     #title-description {
+        width: 60%;
         font-size: 12px;
         margin-bottom: 2.5%;
     }
@@ -206,5 +211,13 @@ h1, h2, h3 {
 
     #product-btn {
         margin-left: -2%;
+    }
+
+    #left-icon {
+        padding-left: 31%;
+    }
+
+    #team-description {
+        font-size: 20px;
     }
 }
