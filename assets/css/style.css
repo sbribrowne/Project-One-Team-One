@@ -136,8 +136,31 @@ h1, h2, h3 {
 .carousel {
     margin-bottom: -5%;
 }
+
 /*FOOTER STYLING*/
 
 #footer {
     background-color: #CB3526; 
+}
+
+/*---------------------------TEAM PAGE ------------------------------------*/
+
+.card {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.team-row {
+    margin-top: 3%;
+}
+
+#team-jumbo {
+    height: 450px;
+}
+
+#team-description {
+    height: 20%;
+    text-align: center;
+    font-size: 25px;
+    color: white;
 }
