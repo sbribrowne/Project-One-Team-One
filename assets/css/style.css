@@ -18,6 +18,10 @@ h1, h2, h3 {
     margin-top: -4%;
 }
 
+#input-row {
+    margin-top: 3%;
+}
+
 #product-title {
     letter-spacing: 10px;
     font-size: 6em;
@@ -31,7 +35,7 @@ h1, h2, h3 {
     color: #FFF9EE;
     width: 40%;
     margin: auto;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 #product-input {
@@ -124,6 +128,7 @@ h1, h2, h3 {
 
 #about-description {
     text-align: center;
+    font-size: 16px;
     color: #101010;
     width: 80%;
     margin-top: 1.5%;
@@ -177,6 +182,29 @@ h1, h2, h3 {
 #team-description {
     height: 20%;
     text-align: center;
+    font-weight: 300;
     font-size: 25px;
     color: white;
+}
+
+/* MEDIA QUERY: applies to width of 640px */
+
+@media only screen and (max-width: 640px) {
+    .jumbotron {
+        margin-top: -8%;
+        height: 600px;
+    }
+
+    #title-description {
+        font-size: 12px;
+        margin-bottom: 2.5%;
+    }
+
+    #product-input {
+        margin-left: 20%;
+    }
+
+    #product-btn {
+        margin-left: -2%;
+    }
 }
