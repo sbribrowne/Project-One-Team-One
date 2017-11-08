@@ -1,9 +1,89 @@
-.jumbotron {
-    height: 400px;
-    background-color: navajowhite;
+body {
+    font-family: 'Inconsolata', monospace;
 }
 
-/*Nav Bar */
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+}
+
+/*Jumbotron + Elements*/
+.jumbotron {
+    height: 650px;
+    background: url(../images/jumbotronimg.png) center center no-repeat;
+    background-size: cover;
+    margin-top: -4%;
+}
+
+#product-title {
+    letter-spacing: 10px;
+    font-size: 6em;
+    text-align: center;
+    color: white;
+    padding-top: 10%;
+}
+
+#title-description {
+    text-align: center;
+    color: #FFF9EE;
+    width: 40%;
+    margin: auto;
+    font-size: 12px;
+}
+
+#product-input {
+    width: 200px; 
+    height: 100%;
+    margin-left: 40%;
+    background-color: white;
+    border-bottom: none;
+    padding: 14.5px 0px 17px 10px;
+}
+
+#product-btn {
+    height: 100%;
+    margin-left: -1%;
+    background-color: #8DB5C5;
+    padding: 7.5px 10px 5px 0px;
+}
+
+#search {
+    font-size: 30px;
+}
+
+#product-input::placeholder {
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 5%;
+  }
+
+#product-btn:hover {
+    background-color: #005170;
+}
+    
+/*Nav Bar - styling */
+.nav-wrapper {
+    background-color: #CB3526; 
+}
+
+#autocomplete-input::placeholder {
+    color: #FFF9EE;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 5%;
+  }
+
+#logo {
+    font-family: 'Inconsolata', monospace;
+    color: #FFF9EE;
+    letter-spacing: 3px;
+    margin-left: 4%;
+    font-weight: 700;
+}
+
+/*Nav Bar - auto fill */
 #topbarsearch .input-field .prefix { 
     width:0rem !important;    
     }        
@@ -14,3 +94,45 @@
     margin-left: 1rem !important;
     }
 
+/*About Section*/
+
+.about-title {
+    font-family: 'Anton', sans-serif;
+    font-weight: 600;
+    color: #8DB5C5;
+    text-align: center;
+    margin-top: 8%;
+    font-size: 40px;
+    letter-spacing: 20px;
+}
+
+.about-icons {
+    color: #005170;
+}
+
+#left-icon {
+    font-size: 10em;
+    text-align: center;
+    padding-left: 42.5%;
+    margin-top: -1%;
+}
+
+#about-description {
+    text-align: center;
+    color: #101010;
+    width: 80%;
+    margin-top: 1.5%;
+    margin-bottom: -3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*CAROUSEL STYLING*/
+.carousel {
+    margin-bottom: -5%;
+}
+/*FOOTER STYLING*/
+
+#footer {
+    background-color: #CB3526; 
+}
