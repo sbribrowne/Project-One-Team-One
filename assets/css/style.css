@@ -162,6 +162,14 @@ h1, h2, h3 {
     color: white;
 }
 
+.github-link {
+    color: black;
+}
+
+.github-link:hover {
+    color: #CB3526;
+}
+
 #team-jumbo {
     height: 500px;
 }
