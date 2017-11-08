@@ -10,9 +10,10 @@ var BestBuyAPI = {
     },
     searchProduct: function(searchQuery){
         var requestURL = `https://api.bestbuy.com/v1/products((search=${searchQuery})&customerReviewCount>=1)?apiKey=RRDFqF9yMBmlBXsaQx1TqHe6&sort=customerReviewCount.dsc&pageSize=1&format=json`; 
-       
+       var requestURL2 = `https://api.bestbuy.com/v1/products(upc=${searchQuery})?apiKey=RRDFqF9yMBmlBXsaQx1TqHe6&format=json`;
+
         $.ajax({
-            url: requestURL,
+            url: requestURL2,
             method: "GET"
         }).done(function(response) {
             BestBuyAPI.firstProduct.name = response.products[0].name;
