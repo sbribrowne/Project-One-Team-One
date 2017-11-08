@@ -56,3 +56,8 @@ Product{
         reviewsNum
         UPC
     }
+
+1. UPC from Walmart
+2. Search by UPC on bestbuy
+    populate object keys
+3. Object is passed to Webhose
