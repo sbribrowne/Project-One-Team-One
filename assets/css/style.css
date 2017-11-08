@@ -1,3 +1,7 @@
+body {
+    font-family: 'Inconsolata', monospace;
+}
+
 p {
     font-family: 'Open Sans', sans-serif;
 }
@@ -14,11 +18,15 @@ h1, h2, h3 {
     margin-top: -4%;
 }
 
+#input-row {
+    margin-top: 3%;
+}
+
 #product-title {
     letter-spacing: 10px;
     font-size: 6em;
     text-align: center;
-    color: #FFF9EE;
+    color: white;
     padding-top: 10%;
 }
 
@@ -27,29 +35,34 @@ h1, h2, h3 {
     color: #FFF9EE;
     width: 40%;
     margin: auto;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 #product-input {
     width: 200px; 
     height: 100%;
-    margin-left: 41%;
+    margin-left: 40%;
     background-color: white;
     border-bottom: none;
-    margin-top: 2%;
-    padding: 15px 0px 15px 10px;
+    padding: 14.5px 0px 17px 10px;
 }
 
 #product-btn {
     height: 100%;
+    margin-left: -1%;
     background-color: #8DB5C5;
-    margin-left: -0.2%;
-    padding: 7.5px 10px 6px 0px;
+    padding: 7.5px 10px 5px 0px;
 }
 
 #search {
     font-size: 30px;
 }
+
+#product-input::placeholder {
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 5%;
+  }
 
 #product-btn:hover {
     background-color: #005170;
@@ -58,6 +71,11 @@ h1, h2, h3 {
 /*Nav Bar - styling */
 .nav-wrapper {
     background-color: #CB3526; 
+}
+
+#autocomplete-input:focus {
+    border-bottom-color: white;
+    box-shadow: none;
 }
 
 #autocomplete-input::placeholder {
@@ -110,16 +128,83 @@ h1, h2, h3 {
 
 #about-description {
     text-align: center;
+    font-size: 16px;
     color: #101010;
     width: 80%;
     margin-top: 1.5%;
-    margin-bottom: 7%;
+    margin-bottom: -3%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/*CAROUSEL STYLING*/
+.carousel {
+    margin-bottom: -5%;
 }
 
 /*FOOTER STYLING*/
 
 #footer {
     background-color: #CB3526; 
+}
+
+/*---------------------------TEAM PAGE ------------------------------------*/
+
+.card {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.team-row {
+    margin-top: 3%;
+}
+
+.card-content {
+    background-color: #F0E8E7; 
+}
+
+.card-title {
+    color: white;
+}
+
+.github-link {
+    color: black;
+}
+
+.github-link:hover {
+    color: #CB3526;
+}
+
+#team-jumbo {
+    height: 500px;
+}
+
+#team-description {
+    height: 20%;
+    text-align: center;
+    font-weight: 300;
+    font-size: 25px;
+    color: white;
+}
+
+/* MEDIA QUERY: applies to width of 640px */
+
+@media only screen and (max-width: 640px) {
+    .jumbotron {
+        margin-top: -8%;
+        height: 600px;
+    }
+
+    #title-description {
+        font-size: 12px;
+        margin-bottom: 2.5%;
+    }
+
+    #product-input {
+        margin-left: 20%;
+    }
+
+    #product-btn {
+        margin-left: -2%;
+    }
 }

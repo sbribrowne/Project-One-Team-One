@@ -12,35 +12,30 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- GOOGLE ICONS LINK -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<<<<<<< HEAD
     <!-- GOOGLE FONTS LINK -->
     <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans:300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat" rel="stylesheet">
 
     <title>techGine</title>
-=======
-    <title>techGine - One Stop Tech and Electronics Reviews and Resources!</title>
->>>>>>> upstream/master
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
 </head>
 <body>
     <nav>
         <div class="nav-wrapper">
-<<<<<<< HEAD
-            <a href="#" class="brand-logo" id="logo">techGine</a>
-=======
-            <a href="#" class="brand-logo" id="logo">techGine - One Stop Tech and Electronics Reviews and Resources!</a>
->>>>>>> upstream/master
+            <a href="index.html" class="brand-logo" id="logo">techGine</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#aboutsection">About</a></li>
+            <li><a href="team.html">Team</a></li>
             <li>
                 <div class="center row">
                     <div class="col s12 " >
                         <div class="row" id="topbarsearch">
                         <div class="input-field col s6 s12 red-text">
                             <i class="red-text material-icons prefix">search</i>
-                            <input type="text" placeholder="Search" id="autocomplete-input" class="autocomplete red-text" >
+                            <input type="text" placeholder="Search" id="autocomplete-input" class="autocomplete" >
                         </div>
                         </div>
                     </div>
@@ -52,14 +47,20 @@
     
     <div class="jumbotron">
         <h1 id="product-title">PRODUCT NAME</h1>
-        <p id="title-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim, risus ut tincidunt eleifend, enim nunc fringilla nunc, in elementum nulla purus non mi. Aliquam erat volutpat. </p>
+        <p id="title-description">One Stop Tech and Electronics Reviews and Resources! Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         <div class="input-group">
-            <input type="text" class="form-control" id="product-input" placeholder="product name">
-            <span class="input-group-btn" id="button-outline">
-                <button class="btn waves-effect waves-light" type="submit" name="action" id="product-btn">
-                    <i class="material-icons right" id="search">search</i>
-                </button>
-            </span>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12" id="input-row">
+                            <input id="product-input" type="text" class="form-control" placeholder="Example: Asus ROG Zephyrus">
+                            <button class="btn waves-effect waves-light" type="submit" name="action" id="product-btn">
+                                    <i class="material-icons right" id="search">search</i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -76,6 +77,13 @@
                 <p id="about-description">Our techGine project provides a one-stop platform allowing users to research and compare electronic and tech products across an array of sources. Users can use the website to aggregate product searches and generate reviews at ease. Reviews include customer ratings from Best Buy, Walmart, and Amazon, as well as YouTube videos, news articles, and trending tweets from Twitter.</p>
             </div>
         </div>
+    </div>
+
+    <div class="carousel" id="carousel-css">
+        <a class="carousel-item" href="#one!"><img src="assets/images/bestbuylogo.png"></a>
+        <a class="carousel-item" href="#two!"><img src="assets/images/walmartlogo.png"></a>
+        <a class="carousel-item" href="#three!"><img src="assets/images/youtubelogo.png"></a>
+        <a class="carousel-item" href="#three!"><img src="assets/images/twitterlogo.png"></a>
     </div>
 
     <footer class="page-footer" id="footer">
@@ -98,7 +106,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
+            © 2017 Copyright Text
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </div>
@@ -107,7 +115,7 @@
     
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
     <!-- Javascript Link -->
     <script src="assets/javascript/tech.js"></script>

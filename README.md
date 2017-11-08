@@ -1,6 +1,6 @@
 # Project: **techGine** -- Tech Product Review Search Aggregate
 
-![techKid](assets/images/techKid.jpg)
+![techGine](assets/images/techGinelogo.png)
 
 ## Contents:
 * [Team Members](#team-members)
@@ -19,7 +19,7 @@ ___
 
 ## Project Description:
 
-The project provides a one-stop platform to allow users to research and compare electronic and tech products across an array of APIs. Users can use the website to aggregate product searches and generate reviews at ease. Reviews include customer ratings, YouTube videos and other useful information for the product.
+Our techGine project provides a one-stop platform allowing users to research and compare electronic and tech products across an array of sources. Users can use the website to aggregate product searches and generate reviews at ease. Reviews include customer ratings from Best Buy, Walmart, and Amazon, as well as YouTube videos, news articles, and trending tweets from Twitter.
 
 ## Project Design:
 
@@ -56,3 +56,8 @@ Product{
         reviewsNum
         UPC
     }
+
+1. UPC from Walmart
+2. Search by UPC on bestbuy
+    populate object keys
+3. Object is passed to Webhose
