@@ -154,6 +154,14 @@ h1, h2, h3 {
     margin-top: 3%;
 }
 
+.card-content {
+    background-color: #F0E8E7; 
+}
+
+.card-title {
+    color: white;
+}
+
 #team-jumbo {
     height: 500px;
 }
