@@ -22,7 +22,7 @@ h1, h2, h3 {
     letter-spacing: 10px;
     font-size: 6em;
     text-align: center;
-    color: #FFF9EE;
+    color: white;
     padding-top: 10%;
 }
 
@@ -34,14 +34,10 @@ h1, h2, h3 {
     font-size: 12px;
 }
 
-#input-row {
-    margin-left: 40%;
-}
-
 #product-input {
     width: 200px; 
     height: 100%;
-    margin-right: 0%;
+    margin-left: 40%;
     background-color: white;
     border-bottom: none;
     padding: 14.5px 0px 17px 10px;
