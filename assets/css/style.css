@@ -186,3 +186,25 @@ h1, h2, h3 {
     font-size: 25px;
     color: white;
 }
+
+/* MEDIA QUERY: applies to width of 640px */
+
+@media only screen and (max-width: 640px) {
+    .jumbotron {
+        margin-top: -8%;
+        height: 600px;
+    }
+
+    #title-description {
+        font-size: 12px;
+        margin-bottom: 2.5%;
+    }
+
+    #product-input {
+        margin-left: 20%;
+    }
+
+    #product-btn {
+        margin-left: -2%;
+    }
+}
