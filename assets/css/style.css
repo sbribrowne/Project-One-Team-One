@@ -18,6 +18,10 @@ h1, h2, h3 {
     margin-top: -4%;
 }
 
+#input-row {
+    margin-top: 3%;
+}
+
 #product-title {
     letter-spacing: 10px;
     font-size: 6em;
@@ -31,7 +35,7 @@ h1, h2, h3 {
     color: #FFF9EE;
     width: 40%;
     margin: auto;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #product-input {
