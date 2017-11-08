@@ -69,6 +69,11 @@ h1, h2, h3 {
     background-color: #CB3526; 
 }
 
+#autocomplete-input:focus {
+    border-bottom-color: white;
+    box-shadow: none;
+}
+
 #autocomplete-input::placeholder {
     color: #FFF9EE;
     font-family: 'Open Sans', sans-serif;
@@ -131,8 +136,47 @@ h1, h2, h3 {
 .carousel {
     margin-bottom: -5%;
 }
+
 /*FOOTER STYLING*/
 
 #footer {
     background-color: #CB3526; 
+}
+
+/*---------------------------TEAM PAGE ------------------------------------*/
+
+.card {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.team-row {
+    margin-top: 3%;
+}
+
+.card-content {
+    background-color: #F0E8E7; 
+}
+
+.card-title {
+    color: white;
+}
+
+.github-link {
+    color: black;
+}
+
+.github-link:hover {
+    color: #CB3526;
+}
+
+#team-jumbo {
+    height: 500px;
+}
+
+#team-description {
+    height: 20%;
+    text-align: center;
+    font-size: 25px;
+    color: white;
 }
