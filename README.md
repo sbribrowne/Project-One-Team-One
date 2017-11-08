@@ -1,6 +1,6 @@
 # Project: **techGine** -- Tech Product Review Search Aggregate
 
-![techKid](assets/images/techKid.jpg)
+![techGine](assets/images/techGinelogo.png)
 
 ## Contents:
 * [Team Members](#team-members)
