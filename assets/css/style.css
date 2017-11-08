@@ -34,21 +34,24 @@ h1, h2, h3 {
     font-size: 12px;
 }
 
+#input-row {
+    margin-left: 40%;
+}
+
 #product-input {
     width: 200px; 
     height: 100%;
-    margin-left: 41%;
+    margin-right: 0%;
     background-color: white;
     border-bottom: none;
-    margin-top: 2%;
-    padding: 15px 0px 15px 10px;
+    padding: 14.5px 0px 17px 10px;
 }
 
 #product-btn {
     height: 100%;
+    margin-left: -1%;
     background-color: #8DB5C5;
-    margin-left: -0.2%;
-    padding: 7.5px 10px 6px 0px;
+    padding: 7.5px 10px 5px 0px;
 }
 
 #search {
@@ -123,11 +126,15 @@ h1, h2, h3 {
     color: #101010;
     width: 80%;
     margin-top: 1.5%;
-    margin-bottom: 7%;
+    margin-bottom: -3%;
     margin-left: auto;
     margin-right: auto;
 }
 
+/*CAROUSEL STYLING*/
+.carousel {
+    margin-bottom: -5%;
+}
 /*FOOTER STYLING*/
 
 #footer {

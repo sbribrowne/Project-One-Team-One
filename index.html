@@ -46,14 +46,20 @@
     
     <div class="jumbotron">
         <h1 id="product-title">PRODUCT NAME</h1>
-        <p id="title-description">One Stop Tech and Electronics Reviews and Resources!</p>
+        <p id="title-description">One Stop Tech and Electronics Reviews and Resources! Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         <div class="input-group">
-            <input type="text" class="form-control" id="product-input" placeholder="Example: Asus ROG Zephyrus">
-            <span class="input-group-btn" id="button-outline">
-                <button class="btn waves-effect waves-light" type="submit" name="action" id="product-btn">
-                    <i class="material-icons right" id="search">search</i>
-                </button>
-            </span>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12" id="input-row">
+                            <input id="product-input" type="text" class="form-control" placeholder="Example: Asus ROG Zephyrus">
+                            <button class="btn waves-effect waves-light" type="submit" name="action" id="product-btn">
+                                    <i class="material-icons right" id="search">search</i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -70,6 +76,13 @@
                 <p id="about-description">Our techGine project provides a one-stop platform allowing users to research and compare electronic and tech products across an array of sources. Users can use the website to aggregate product searches and generate reviews at ease. Reviews include customer ratings from Best Buy, Walmart, and Amazon, as well as YouTube videos, news articles, and trending tweets from Twitter.</p>
             </div>
         </div>
+    </div>
+
+    <div class="carousel" id="carousel-css">
+        <a class="carousel-item" href="#one!"><img src="assets/images/bestbuylogo.png"></a>
+        <a class="carousel-item" href="#two!"><img src="assets/images/walmartlogo.png"></a>
+        <a class="carousel-item" href="#three!"><img src="assets/images/youtubelogo.png"></a>
+        <a class="carousel-item" href="#three!"><img src="assets/images/twitterlogo.png"></a>
     </div>
 
     <footer class="page-footer" id="footer">
@@ -101,7 +114,7 @@
     
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
     <!-- Javascript Link -->
     <script src="assets/javascript/tech.js"></script>

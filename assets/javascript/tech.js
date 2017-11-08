@@ -1,6 +1,5 @@
 //Autocomplete in searchbar (not working - revisit)
-
-$(document).ready(function(){                 
+/* $(document).ready(function(){                 
     $('#autocomplete-input').autocomplete({
     data: {
         "Apple": null,
@@ -9,4 +8,10 @@ $(document).ready(function(){
         "Gargle":null
     }
     });                
-});
+});*/
+
+//Carousel Function (for brands)
+
+$(document).ready(function(){
+    $('.carousel').carousel();
+  });
