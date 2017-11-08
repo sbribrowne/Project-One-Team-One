@@ -35,7 +35,7 @@ h1, h2, h3 {
     color: #FFF9EE;
     width: 40%;
     margin: auto;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 #product-input {
@@ -128,6 +128,7 @@ h1, h2, h3 {
 
 #about-description {
     text-align: center;
+    font-size: 16px;
     color: #101010;
     width: 80%;
     margin-top: 1.5%;
