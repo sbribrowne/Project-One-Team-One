@@ -39,17 +39,19 @@
                 event.preventDefault();
 
                 // Here we grab the text from the input box
-                var product = $("#product-input").val();
+                var product = $("#product-input").val().trim();
+                var productEncoded = encodeURIComponent(product);
+                console.log(productEncoded);
 
                 // Date conversion for setting the max crawl date in query url to 30 days
-                timeStamp = moment().subtract(30, "days");
+                var timeStamp = moment().subtract(30, "days");
                 console.log(timeStamp);
 
                 // Here we construct our URL
                 var apiKey = "6580ba1e-e42f-4c2c-88a2-3d7a98ef6ffd";
 
-                var queryURL = `http://webhose.io/reviewFilter?token=6580ba1e-e42f-4c2c-88a2-3d7a98ef6ffd&format=json&ts=${timeStamp}&sort=rating&q=language%3Aenglish%20item.title%3A${product}`;
-                
+                var queryURL = "http://webhose.io/reviewFilter?token=6580ba1e-e42f-4c2c-88a2-3d7a98ef6ffd&format=json&ts=" + timeStamp + "&sort=rating&q=language%3Aenglish%20item.title:" + productEncoded + "";
+
                 //`http://webhose.io/reviewFilter?token=${apiKey}&format=json&language=english&ts=${timeStamp}&sort=rating&q=item.title:${product}`;
                 // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
                 // and display it in the div with an id of movie-view
