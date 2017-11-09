@@ -1,5 +1,5 @@
-function getTitleUPC(str) {
-    if (!str) 
+function getTitleUPC(searchQuery) {
+    if (!searchQuery) 
         return; 
 
     const requestURL = `http://api.walmartlabs.com/v1/search?query=${searchQuery}&format=json&apiKey=rqwj3h4qjprfdnuzvsn3cz4m`; 

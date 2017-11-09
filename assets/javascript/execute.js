@@ -1,11 +1,21 @@
+
+
 $(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+
+	// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
     $('#search').modal();
 
-	//display title, description and photo from BustBuy.js
+	var searchQuery = "lenovo"
+	console.log(searchQuery);
+
+    //display title from getTitleUPC
+    var titleUPC = getTitleUPC(searchQuery);
+    console.log(titleUPC);
+
+	//display description and photo from BustBuy.js
 	$("#prod-title").html(""); //pass in title variable from BestBuy.js
 	$("#prod-description").html(""); //pass in description variable from BestBuy.js
-	$("prod-image").html(""); //pass in image variable from BestBuy.js
+	$("#prod-image").html(""); //pass in image variable from BestBuy.js
 
 	//display ratings from WebHose.js
 	$("#ratings").html(""); //pass in variable from Webhose.js
