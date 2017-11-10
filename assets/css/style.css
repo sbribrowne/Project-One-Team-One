@@ -186,6 +186,11 @@ h1, h2, h3 {
     color: #CB3526;
 }
 
+#card-click {
+    background-color: #8DB5C5;
+    color: white;
+}
+
 #team-jumbo {
     height: 500px;
 }
