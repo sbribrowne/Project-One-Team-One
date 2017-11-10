@@ -1,5 +1,9 @@
 
+
+ var a = {}
+
 $(document).ready(function(){
+
 
 	// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
     $('#search').modal();
@@ -8,18 +12,35 @@ $(document).ready(function(){
     	event.preventDefault();
     
 		var searchQuery = $("#product-input").val().trim();
-		console.log(searchQuery);
+		//console.log(searchQuery);
 
     	//display title from getTitleUPC
-    	var titleUPC = getTitleUPC(searchQuery);
-    
-    		console.log(titleUPC);
-    		console.log(titleUPC.UPC);
-    		console.log(titleUPC.title);
-    
-    	
     	
 
+    	var titleUPC = getTitleUPC(searchQuery);
+
+    	titleUPC.done(function(response) {
+        	a = {
+	            title: response.items[0].name,
+	            UPC:  response.items[0].upc 
+	        }  
+
+	        //display description and photo from BestBuy.js
+	        $("#prod-title").html(a.title);
+	        // console.log(a);
+	        console.log(a.UPC);
+	        console.log(a.title);
+
+        	var youtube = getVideo(a.title);
+        	youtube.done(function(response) {
+
+			console.log(response.items[0].id.videoId);                 
+		});
+
+	    });
+    
+    	
+    	
 		//display description and photo from BustBuy.js
 		$("#prod-title").html(""); //pass in title variable from BestBuy.js
 		$("#prod-description").html(""); //pass in description variable from BestBuy.js
