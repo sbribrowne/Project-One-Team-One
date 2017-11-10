@@ -198,6 +198,11 @@ h1, h2, h3 {
     color: white;
 }
 
+/* MODAL UPDATE */
+#modal1 {
+    width: 90%;
+}
+
 /* MEDIA QUERY: applies to width of 640px */
 
 @media only screen and (max-width: 640px) {
