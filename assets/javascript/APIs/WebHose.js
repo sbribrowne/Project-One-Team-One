@@ -28,13 +28,6 @@ function getReviews(str) {
         console.log(response);
 
 
-
-        for (i=0; i<response.reviews.item.length; i++) {
-            result.push(response.reviews.item[i].site_full)
-        }
-        
-        console.log(result);
-
        /* var reviewMap = new Map(source, reviews);
 
         foreach (var source in response);
@@ -54,19 +47,7 @@ function getReviews(str) {
         */
     });
 
-    //return reviewDict;
-    //console.log(reviewDict);
+    return result;
+    console.log(result);
 
 }
-
-
-/*
-1. Go through your result
-2. Use URL as a key
-3. The value of each key is an array
-4a.When you see a key you’ve seen before add the review to it’s value (edited)
-4b.If you haven’t seen the key before, add it, then add the review to it’s value
-    maybe switch 4a and 4b
-5. return your dictionary
-
-*/
