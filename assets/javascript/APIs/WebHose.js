@@ -33,6 +33,26 @@ function getReviews(str) {
         result.title = response.reviews[0].item.title;
         result.site = response.reviews[0].item.site_full;
         result.reviewText = response.reviews[0].text;
+
+        var reviewSources = [];
+        var reviewTexts = [];
+        var placeholderSource = response.reviews[0].item.site; //FIrst source
+
+        for(var i=0; i < response.reviews.length; i++){
+            console.log( response.reviews[i].item.title + " " + response.reviews[i].item.site );
+
+            if(response.reviews[i].item.site !== placeholderSource){ //check that current review is not same source as first review
+                reviewSources[i] = response.reviews[i].item.site;
+                reviewTexts[i] = response.reviews[i].text;
+
+                placeholderSource = response.reviews[i].item.site; //sets "first" source to current source
+            }
+
+            if(reviewSources.length >= 3 ) break; //quit after 3 sources
+        }
+
+        console.log(reviewSources);
+        console.log(reviewTexts);
     });
 
     return result;
