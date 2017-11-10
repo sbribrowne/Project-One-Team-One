@@ -156,7 +156,8 @@ h1, h2, h3 {
 /*FOOTER STYLING*/
 
 #footer {
-    background-color: #CB3526; 
+    background-color: #CB3526;
+    padding-bottom: 1.5%; 
 }
 
 /*---------------------------TEAM PAGE ------------------------------------*/
