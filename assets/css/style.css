@@ -121,7 +121,7 @@ h1, h2, h3 {
     font-weight: 600;
     color: #8DB5C5;
     text-align: center;
-    margin-top: 8%;
+    margin-top: 9%;
     font-size: 40px;
     letter-spacing: 20px;
 }
@@ -158,6 +158,7 @@ h1, h2, h3 {
 #footer {
     background-color: #CB3526;
     padding-bottom: 1.5%; 
+    margin-top: 3%;
 }
 
 /*---------------------------TEAM PAGE ------------------------------------*/
