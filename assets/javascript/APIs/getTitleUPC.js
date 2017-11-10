@@ -1,6 +1,6 @@
 function getTitleUPC(searchQuery) {
     if (!searchQuery) 
-        return; 
+        return Promise.reject("pass in something"); 
 
     const requestURL = `http://api.walmartlabs.com/v1/search?query=${searchQuery}&format=json&apiKey=rqwj3h4qjprfdnuzvsn3cz4m`; 
 
@@ -15,5 +15,10 @@ function getTitleUPC(searchQuery) {
     return $.ajax({
         url: requestURL,
         method: "GET"
+    }).done((response) => {
+        return  {
+            title: response.items[0].name,
+            UPC:  response.items[0].upc 
+        }
     });
 }

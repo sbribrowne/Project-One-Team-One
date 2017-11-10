@@ -1,5 +1,7 @@
 
 
+ var a = {}
+
 $(document).ready(function(){
 
 
@@ -13,7 +15,7 @@ $(document).ready(function(){
 		//console.log(searchQuery);
 
     	//display title from getTitleUPC
-    	 var a = {}
+    	
 
     	var titleUPC = getTitleUPC(searchQuery);
 
@@ -22,12 +24,18 @@ $(document).ready(function(){
 	            title: response.items[0].name,
 	            UPC:  response.items[0].upc 
 	        }  
+
 	        //display description and photo from BestBuy.js
 	        $("#prod-title").html(a.title);
-
-	        console.log(a);
+	        // console.log(a);
 	        console.log(a.UPC);
 	        console.log(a.title);
+
+        	var youtube = getVideo(a.title);
+        	youtube.done(function(response) {
+
+			console.log(response.items[0].id.videoId);                 
+		});
 
 	    });
     
