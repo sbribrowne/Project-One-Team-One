@@ -92,6 +92,17 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
+#nav-search {
+    background-color: #CB3526;
+    padding-left: 1%;
+    margin-right: 1%;
+    box-shadow: none;
+}
+
+#nav-search:hover {
+    background-color: #8DB5C5;
+}
+
 /*Nav Bar - auto fill */
 #topbarsearch .input-field .prefix { 
     width:0rem !important;    

@@ -18,8 +18,14 @@ $(document).ready(function() {
 
 //Modal Function
 
-  $(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+$(document).ready(function(){
+  // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+  $('.modal').modal();
+});
+
+$('#autocomplete-input').on("keypress", function (e) {
+  if(e.keyCode === 13){
+    console.log("yay");
     $('.modal').modal();
-  });
-       
+  }
+});
