@@ -92,6 +92,17 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
+#nav-search {
+    background-color: #CB3526;
+    padding-left: 1%;
+    margin-right: 1%;
+    box-shadow: none;
+}
+
+#nav-search:hover {
+    background-color: #8DB5C5;
+}
+
 /*Nav Bar - auto fill */
 #topbarsearch .input-field .prefix { 
     width:0rem !important;    
@@ -110,7 +121,7 @@ h1, h2, h3 {
     font-weight: 600;
     color: #8DB5C5;
     text-align: center;
-    margin-top: 8%;
+    margin-top: 9%;
     font-size: 40px;
     letter-spacing: 20px;
 }
@@ -145,7 +156,9 @@ h1, h2, h3 {
 /*FOOTER STYLING*/
 
 #footer {
-    background-color: #CB3526; 
+    background-color: #CB3526;
+    padding-bottom: 1.5%; 
+    margin-top: 3%;
 }
 
 /*---------------------------TEAM PAGE ------------------------------------*/
@@ -175,6 +188,11 @@ h1, h2, h3 {
     color: #CB3526;
 }
 
+#card-click {
+    background-color: #8DB5C5;
+    color: white;
+}
+
 #team-jumbo {
     height: 500px;
 }
@@ -187,6 +205,11 @@ h1, h2, h3 {
     color: white;
 }
 
+/* MODAL UPDATE */
+#modal1 {
+    width: 90%;
+}
+
 /* MEDIA QUERY: applies to width of 640px */
 
 @media only screen and (max-width: 640px) {
@@ -195,7 +218,12 @@ h1, h2, h3 {
         height: 600px;
     }
 
+    #product-title {
+        font-size: 5em;
+    }
+
     #title-description {
+        width: 60%;
         font-size: 12px;
         margin-bottom: 2.5%;
     }
@@ -206,5 +234,13 @@ h1, h2, h3 {
 
     #product-btn {
         margin-left: -2%;
+    }
+
+    #left-icon {
+        padding-left: 31%;
+    }
+
+    #team-description {
+        font-size: 20px;
     }
 }
