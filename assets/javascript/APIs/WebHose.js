@@ -4,7 +4,7 @@ function getReviews(searchQuery) {
     
 
     //Trims the users search input    
-    var searchTrim = str.trim();
+    var searchTrim = searchQuery.trim();
     console.log(searchTrim);
 
 
