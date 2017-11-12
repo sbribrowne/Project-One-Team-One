@@ -29,13 +29,29 @@ $(document).ready(function(){
 	        $("#prod-title").html(a.title);
 	        // console.log(a);
 	        console.log(a.UPC);
-	        console.log(a.title);
+			console.log(a.title);
+			
+			var BestBuyResponse = searchBestBuy("811571016518");
+            var BestBuyObject = {};
+
+            BestBuyResponse.done(function(response) {
+                BestBuyObject = {
+                    name: response.products[0].name,
+                    imageURL:  response.products[0].image,
+                    description: response.products[0].longDescription
+                }  
+
+                console.log(BestBuyObject.name);
+                console.log(BestBuyObject.description);
+                console.log(BestBuyObject.imageURL);
+            });
 
         	var youtube = getVideo(a.title);
-        	youtube.done(function(response) {
+			youtube.done(function(response) {
+				console.log(response.items[0].id.videoId);                 
+			});
 
-			console.log(response.items[0].id.videoId);                 
-		});
+
 
 	    });
     
