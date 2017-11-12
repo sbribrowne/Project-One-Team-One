@@ -22,5 +22,7 @@ function getTitleUPC(searchQuery) {
             description: response.items[0].longDescription,
             imageURL: response.items[0].largeImage
         }
+
+        console.log(response);
     });
 }
