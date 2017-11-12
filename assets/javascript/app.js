@@ -1,6 +1,6 @@
 
 
- var a = {}
+ var a = {} // Sets our global object for passing information generated from our AJAX calls to Walmart API
 
 $(document).ready(function(){
 
