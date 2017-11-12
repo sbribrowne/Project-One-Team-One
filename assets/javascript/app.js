@@ -9,6 +9,11 @@ $(document).ready(function () {
 
 	$("#search").on("click", function () {
 		event.preventDefault();
+		$("#prod-title").empty();
+		$("#prod-description").empty();
+		$("#ratings").empty();
+		$("#videos").empty();
+
 
 		var searchQuery = $("#product-input").val().trim();
 		//console.log(searchQuery);
@@ -36,30 +41,28 @@ $(document).ready(function () {
 			console.log(a.description);
 			console.log(a.imageURL);
 
-
 			getReviews(searchQuery); //Runs Webhose.js, displays results in DOM.
-			
-		/*
-			var BestBuyResponse = searchBestBuy(a.UPC);
-            var BestBuyObject = {};
 
-            BestBuyResponse.done(function(response) {
-                BestBuyObject = {
-                    name: response.products[0].name,
-                    imageURL:  response.products[0].image,
-                    description: response.products[0].longDescription
-                }  
-
-                console.log(BestBuyObject.name);
-                console.log(BestBuyObject.description);
-				console.log(BestBuyObject.imageURL);
-
-				$("#prod-description").html(`<p id="prod-image"><img src="${BestBuyObject.imageURL}" alt="${BestBuyObject.name}" /></p>`);
-				$("#prod-description").append(`<p>${BestBuyObject.description}</p>`);
-			
-			});
-		*/
-
+			/*
+				var BestBuyResponse = searchBestBuy(a.UPC);
+				var BestBuyObject = {};
+	
+				BestBuyResponse.done(function(response) {
+					BestBuyObject = {
+						name: response.products[0].name,
+						imageURL:  response.products[0].image,
+						description: response.products[0].longDescription
+					}  
+	
+					console.log(BestBuyObject.name);
+					console.log(BestBuyObject.description);
+					console.log(BestBuyObject.imageURL);
+	
+					$("#prod-description").html(`<p id="prod-image"><img src="${BestBuyObject.imageURL}" alt="${BestBuyObject.name}" /></p>`);
+					$("#prod-description").append(`<p>${BestBuyObject.description}</p>`);
+				
+				});
+			*/
 
 			/*
 				var BestBuyResponse = searchBestBuy(a.UPC);
@@ -112,9 +115,7 @@ $(document).ready(function () {
 
 });
 
-	}); 
-    	
-    	
+
 		//display description and photo from BustBuy.js
 		//$("#prod-title").html(""); //pass in title variable from BestBuy.js
 		//$("#prod-description").html(""); //pass in description variable from BestBuy.js
