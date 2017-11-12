@@ -18,7 +18,9 @@ function getTitleUPC(searchQuery) {
     }).done((response) => {
         return  {
             title: response.items[0].name,
-            UPC:  response.items[0].upc 
+            UPC:  response.items[0].upc,
+            description: response.items[0].longDescription,
+            imageURL: response.items[0].largeImage
         }
     });
 }

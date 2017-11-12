@@ -15,9 +15,22 @@
     <script type="text/javascript">
 
             //var product = BestBuyAPI.searchProduct("Lenovo laptop");
-            var product = searchBestBuy("811571016518");
-            
-            console.log(product);
+            //013803129113
+            //811571016518
+            var BestBuyResponse = searchBestBuy("701980339387");
+            var BestBuyObject = {};
+
+            BestBuyResponse.done(function(response) {
+                BestBuyObject = {
+                    name: response.products[0].name,
+                    imageURL:  response.products[0].image,
+                    description: response.products[0].longDescription
+                }  
+
+                console.log(BestBuyObject.name);
+                console.log(BestBuyObject.description);
+                console.log(BestBuyObject.imageURL);
+            });
 
     </script>
    
