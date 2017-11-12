@@ -4,7 +4,7 @@ function getReviews(str) {
     
 
     //Trims the users search input    
-    var searchTrim = searchQuery.trim();
+    var searchTrim = str.trim();
     console.log(searchTrim);
 
     //Then encodes the trim to fit Webhose's URI structure
@@ -16,25 +16,23 @@ function getReviews(str) {
     var timeStamp = moment().subtract(30, "days");
 
 
-    const requestURL = "http://webhose.io/reviewFilter?token=6580ba1e-e42f-4c2c-88a2-3d7a98ef6ffd&format=json&ts=" + timeStamp + "&sort=rating&q=language%3Aenglish%20item.title:" + searchReviews + "";
+    const requestSite = "http://webhose.io/reviewFilter?token=6580ba1e-e42f-4c2c-88a2-3d7a98ef6ffd&format=json&ts=" + timeStamp + "&sort=rating&q=language%3Aenglish%20item.title:" + searchReviews + "";
 
     //stores our results
-    var result = { 
-        title: "", 
-        site: "",
-        reviewText: "" 
-    };
+    // var result = { 
+    //     title: "", 
+    //     site: "",
+    //     reviewText: "" 
+    // };
 
-    $.ajax({
-        url: requestURL,
+    return $.ajax({
+        url: requestSite,
         method: "GET"
-    }).done(function (response) {
-        console.log(response);
-        result.title = response.reviews[0].item.title;
-        result.site = response.reviews[0].item.site_full;
-        result.reviewText = response.reviews[0].text;
+    }).done((response) => {
+        return  {
+            title: response.reviews[0].item.title,
+            site:  response.reviews[0].item.site_full,
+            reviewText: response.reviews[0].text
+        }
     });
-
-    return result;
-    console.log(result);
 }
