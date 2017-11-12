@@ -35,13 +35,30 @@
         //var searchQuery = "asus rog";
         var searchQuery = "asus rog";
         //var reviewsObj = {};
+        var prodTitle;
 
 
             //Runs both getTitleUPC and Youtube function
             //To view YouTube video, use this url: https://www.youtube.com/watch?v="whatever id is generated"
 
-            var test = {};
-            test = getTitleUPC(searchQuery);
+            var titleUPC = getTitleUPC(searchQuery);
+            
+                    titleUPC.done(function(response) {
+                        a = {
+                            title: response.items[0].name,
+                            UPC:  response.items[0].upc,
+                            description: response.items[0].longDescription,
+                            imageURL: response.items[0].largeImage
+                        }  
+
+                        console.log(a.UPC);
+			console.log(a.title);
+			console.log(a.description);
+            console.log(a.imageURL);
+
+           // getReviews(a.title);
+            
+        });
            /* var WebHoseResponse = getReviews(searchQuery);
             var WebHoseObject = {};
 

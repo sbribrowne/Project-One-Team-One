@@ -4,7 +4,7 @@ function getReviews(searchQuery) {
     
 
     //Trims the users search input    
-    var searchTrim = str.trim();
+    var searchTrim = searchQuery.trim();
     console.log(searchTrim);
 
 
@@ -17,12 +17,12 @@ function getReviews(searchQuery) {
     const timeStamp = moment().subtract(30, "days");
 
 
-    const requestURL = "http://webhose.io/reviewFilter?token=6580ba1e-e42f-4c2c-88a2-3d7a98ef6ffd&format=json&ts=" + timeStamp + "&sort=rating&q=language%3Aenglish%20item.title:" + searchReviews + "";
-    console.log(requestURL);
+    const requestURLWebhose = "http://webhose.io/reviewFilter?token=6580ba1e-e42f-4c2c-88a2-3d7a98ef6ffd&format=json&ts=" + timeStamp + "&sort=rating&q=language%3Aenglish%20item.title:" + searchReviews + "";
+    console.log(requestURLWebhose);
 
 
-    return $.ajax({
-        url: requestURL,
+    $.ajax({
+        url: requestURLWebhose,
         method: "GET"
     }).done(function (response) {
         console.log(response);
@@ -69,15 +69,6 @@ function getReviews(searchQuery) {
         var ratingsAverage = counter / reviewRatings.length;
         
         console.log("avg: " + ratingsAverage);
-
-        return  {
-            sources: reviewSources,
-            texts:  reviewTexts,
-            ratings: reviewRatings
-        }
-
-       // $("#results").append(reviewSources);
-
     });
 }
 
