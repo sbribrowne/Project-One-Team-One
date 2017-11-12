@@ -12,7 +12,7 @@ function getReviews(str) {
     console.log("search reviews: " + searchReviews);
 
 
-    //creates a timestamp using moment.js 30 days from the moment of the search to give us the max number of days of Webhose's scraped reviews 
+    //Creates a timestamp using moment.js 30 days from the moment of the search to give us the max number of days of Webhose's scraped reviews 
     const timeStamp = moment().subtract(30, "days");
 
 
@@ -23,38 +23,33 @@ function getReviews(str) {
         method: "GET"
     }).done(function (response) {
         console.log(response);
-     /*   result.title = response.reviews[0].item.title;
-        result.site = response.reviews[0].item.site_full;
-        result.reviewText = response.reviews[0].text;*/
 
         var reviewSources = [];
-            reviewSources[0] = response.reviews[0].item.site;
+            reviewSources[0] = response.reviews[0].item.site; // Assigning the first review site to first index
         var reviewTexts = [];
-            reviewTexts[0] = response.reviews[0].text; //assigning first review to first index
+            reviewTexts[0] = response.reviews[0].text; //Assigning first review to first index
         var reviewRatings = [];
-            reviewRatings[0] = response.reviews[0].rating;
+            reviewRatings[0] = response.reviews[0].rating; //Assigning first review rating to first index
 
-        var placeholderSource = response.reviews[0].item.site; //FIrst source
+        var placeholderSource = response.reviews[0].item.site; //Stores the first review site
 
         for(var i=0; i < response.reviews.length; i++){
             console.log( response.reviews[i].item.title + " " + response.reviews[i].item.site );
 
-            if(response.reviews[i].item.site !== placeholderSource){ //check that current review is not same source as first review
+            if(response.reviews[i].item.site !== placeholderSource){ //Checks that the current review is not the same source as the first review
                 reviewSources.push(response.reviews[i].item.site);
                 reviewTexts.push(response.reviews[i].text);
                 reviewRatings.push(response.reviews[i].rating);
 
-                placeholderSource = response.reviews[i].item.site; //sets "first" source to current source
+                placeholderSource = response.reviews[i].item.site; //Sets the "first" source to the current source
             }
 
-            if(reviewSources.length >= 3 ) break; //quit after 3 sources
+            if(reviewSources.length >= 3 ) break; //Stops the loop after 3 sources
         }
 
         console.log("Sources array: " + reviewSources);
         console.log(reviewTexts);
         console.log(reviewRatings);
-
-        //var ratingsAverage = (reviewRatings[0] + reviewRatings[1] + reviewRatings[2]) / reviewRatings.length;
         
         var counter=0;
         for(var x=0; x<reviewRatings.length; x++){
@@ -70,9 +65,6 @@ function getReviews(str) {
         
         console.log("avg: " + ratingsAverage);
 
-        
-
-       // $("#results").append(reviewSources);
 
     });
 }
