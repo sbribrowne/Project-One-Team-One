@@ -36,7 +36,11 @@ $(document).ready(function () {
 			console.log(a.description);
 			console.log(a.imageURL);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> bea3bd6f21741bb0fd38c9e372570b289f82b06b
 
 			getReviews(searchQuery); //Runs Webhose.js, displays results in DOM.
 			
@@ -60,7 +64,11 @@ $(document).ready(function () {
 			
 			});
 		*/
+<<<<<<< HEAD
 >>>>>>> upstream/master
+=======
+
+>>>>>>> bea3bd6f21741bb0fd38c9e372570b289f82b06b
 
 			/*
 				var BestBuyResponse = searchBestBuy(a.UPC);
@@ -110,10 +118,14 @@ $(document).ready(function () {
 		});
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bea3bd6f21741bb0fd38c9e372570b289f82b06b
 	});
 
 });
 
+<<<<<<< HEAD
 
 
 =======
@@ -121,6 +133,11 @@ $(document).ready(function () {
     	
     	
 >>>>>>> upstream/master
+=======
+	}); 
+    	
+    	
+>>>>>>> bea3bd6f21741bb0fd38c9e372570b289f82b06b
 		//display description and photo from BustBuy.js
 		//$("#prod-title").html(""); //pass in title variable from BestBuy.js
 		//$("#prod-description").html(""); //pass in description variable from BestBuy.js
