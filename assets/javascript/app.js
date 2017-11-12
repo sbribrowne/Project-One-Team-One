@@ -1,7 +1,7 @@
 var a = {}
 var result = {}
 
-$(document).ready(function () {
+$(document).ready(function() {
 
 
 	// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
@@ -82,13 +82,21 @@ $(document).ready(function () {
 				});
 			*/
 
-			var youtube = getVideo(a.title);
+			var youtube = getVideo(searchQuery);
 			youtube.done(function (response) {
 
-				var video = response.items[0].id.videoId;
-				console.log(video);
+				console.log(response);
 
-				$("#videos").html("<object data='http://www.youtube.com/embed/" + video + "' width='500' height='300'></object>")
+				var video1 = response.items[0].id.videoId;
+				var video2 = response.items[1].id.videoId;
+				var video3 = response.items[2].id.videoId;
+				console.log(video1);
+				console.log(video2);
+				console.log(video3);
+
+				$("#videos").html("<object data='http://www.youtube.com/embed/" + video1 + "' width='500' height='300'></object>");
+				$("#videos-1").html("<object data='http://www.youtube.com/embed/" + video2 + "' width='500' height='300'></object>");
+				$("#videos-2").html("<object data='http://www.youtube.com/embed/" + video3 + "' width='500' height='300'></object>")
 
 				//var prodtitle = JSON.stringify(a.title);
 				//console.log(prodtitle);
@@ -112,7 +120,6 @@ $(document).ready(function () {
 
 });
 
-	}); 
     	
     	
 		//display description and photo from BustBuy.js
