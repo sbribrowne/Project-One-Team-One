@@ -23,40 +23,50 @@
         }
     </style>
     
+    
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBna8bexCsD63Yl485W1F3Fw4VMUQOreW0",
+    authDomain: "project-1-2d68f.firebaseapp.com",
+    databaseURL: "https://project-1-2d68f.firebaseio.com",
+    projectId: "project-1-2d68f",
+    storageBucket: "project-1-2d68f.appspot.com",
+    messagingSenderId: "326265075302"
+  };
+  firebase.initializeApp(config);
+</script>
+
 </head>
 
 <body>
+<button id="button">Button</button>
 
     <div id="results"></div>
 
     <script type="text/javascript">
 
+        $("#button").on("click", function(){
+            writeToDB(Math.random());
+        });
+
         //search Query input
         //var searchQuery = "asus rog";
         var searchQuery = "Lenovo yoga";
-        //var reviewsObj = {};
+        
 
+        var database = firebase.database();
 
-            //Runs both getTitleUPC and Youtube function
-            //To view YouTube video, use this url: https://www.youtube.com/watch?v="whatever id is generated"
+    database.ref().on("value", function(snapshot) { //listen to change in DB
+       var value = snapshot.val();
+       console.log(value);
+    });
 
-            var test = {};
-            test = getTitleUPC(searchQuery);
-           /* var WebHoseResponse = getReviews(searchQuery);
-            var WebHoseObject = {};
+    function writeToDB(str){
+        database.ref().set( {UPC: str} );
+    }
 
-            WebHoseResponse.done(function(response) {
-                WebHoseObject = {
-                    sources: reviewSources,
-                    texts:  reviewTexts,
-                    ratings: reviewRatings
-                }  
-
-                console.log(WebHoseObject.sources);
-                console.log(WebHoseObject.texts);
-                console.log(WebHoseObject.ratings);
-            });
-            */
 
     </script>
 </body>

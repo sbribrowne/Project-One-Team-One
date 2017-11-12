@@ -34,8 +34,10 @@
                     <div class="col s12 " >
                         <div class="row" id="topbarsearch">
                         <div class="input-field col s6 s12 red-text">
-                            <i class="red-text material-icons prefix">search</i>
-                            <input type="text" placeholder="Search" id="autocomplete-input" class="autocomplete" >
+                            <form>
+                                <i class="red-text material-icons prefix btn modal-trigger" type="button" id="nav-search" data-target="modal1">search</i>
+                                <input type="text" placeholder="Search" id="autocomplete-input" class="autocomplete">
+                            </form>
                         </div>
                         </div>
                     </div>
@@ -54,7 +56,7 @@
                     <div class="row">
                         <div class="input-field col s12" id="input-row">
                             <input id="product-input" type="text" class="form-control" placeholder="Example: Asus ROG Zephyrus">
-                            <button class="btn waves-effect waves-light" type="submit" name="action" id="product-btn">
+                            <button class="btn waves-effect waves-light modal-trigger" type="submit" data-target="modal1" name="action" id="product-btn">
                                     <i class="material-icons right" id="search">search</i>
                             </button>
                         </div>
@@ -88,29 +90,24 @@
 
     <footer class="page-footer" id="footer">
         <div class="container">
-            <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-            </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
             © 2017 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
+            <a class="grey-text text-lighten-4 right" href="https://github.com/sbribrowne/Project-One-Team-One">Project Github Repository</a>
         </div>
     </footer>
+
+    <!-- Modal Trigger <button data-target="modal1" class="btn modal-trigger">Modal</button>  -->
+  
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4 id="prod-title">Product Name</h4>
+        <div id="prod-description"></div>
+        <div id="ratings"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
               
     
     <!--Import jQuery before materialize.js-->
@@ -123,7 +120,7 @@
     <!-- Javascript Link -->
     <script src="assets/javascript/tech.js"></script>
     <script src="assets/javascript/APIs/getTitleUPC.js"></script>
-    <script src="assets/javascript/APIs/BestBuy.js"></script>
+   <!--BEST BUY SUCKS <script src="assets/javascript/APIs/BestBuy.js"></script> -->
     <script src="assets/javascript/APIs/WebHose.js"></script>
     <script src="assets/javascript/APIs/Youtube.js"></script>
     <script src="assets/javascript/app.js"></script>
