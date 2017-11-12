@@ -60,7 +60,7 @@ $(document).ready(function(){
 
         	var youtube = getVideo(a.title);
 			youtube.done(function(response) {
-				console.log(response.items[0].id.videoId);                 
+				//console.log(response.items[0].id.videoId);                 
 			});
 
 

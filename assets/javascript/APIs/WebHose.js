@@ -1,10 +1,10 @@
-function getReviews(productTitle) {
-    if (!productTitle)
+function getReviews(searchQuery) {
+    if (!searchQuery)
         return;
     
 
     //Trims the users search input    
-    var searchTrim = productTitle.trim();
+    var searchTrim = searchQuery.trim();
     console.log(searchTrim);
 
 
@@ -58,13 +58,13 @@ function getReviews(productTitle) {
         for(var x=0; x<reviewRatings.length; x++){
             counter += reviewRatings[x];
 
-        /*  DISPLAY RESULTS IN DOM
+          //DISPLAY RESULTS IN DOM
             var p = $("<p>");
             p.append("Source " + (x +1) + ": " + reviewSources[x] + " <br />");
             p.append("Rating: " + reviewRatings[x] + " <br />");
             p.append(reviewTexts[x] + " ");
-            $("#results").append(p);
-        */
+            $("#ratings").append(p);
+        
         }
         var ratingsAverage = counter / reviewRatings.length;
         
