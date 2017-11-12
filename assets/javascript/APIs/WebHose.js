@@ -24,17 +24,8 @@ function getReviews(productTitle) {
     return $.ajax({
         url: requestURL,
         method: "GET"
-<<<<<<< HEAD
     }).done(function (response) {
         console.log(response);
-=======
-    }).done((response) => {
-        console.log("response: " + response);
-        test = response;
-     /*   result.title = response.reviews[0].item.title;
-        result.site = response.reviews[0].item.site_full;
-        result.reviewText = response.reviews[0].text;*/
->>>>>>> upstream/master
 
         var reviewSources = [];
             reviewSources[0] = response.reviews[0].item.site; // Assigning the first review site to first index
@@ -79,8 +70,6 @@ function getReviews(productTitle) {
         
         console.log("avg: " + ratingsAverage);
 
-<<<<<<< HEAD
-=======
         return  {
             sources: reviewSources,
             texts:  reviewTexts,
@@ -88,7 +77,6 @@ function getReviews(productTitle) {
         }
 
        // $("#results").append(reviewSources);
->>>>>>> upstream/master
 
     });
 }
