@@ -4,7 +4,7 @@ function getReviews(productTitle) {
     
 
     //Trims the users search input    
-    var searchTrim = productTitle.trim();
+    var searchTrim = str.trim();
     console.log(searchTrim);
 
 
@@ -78,3 +78,4 @@ function getReviews(productTitle) {
         console.log("avg: " + ratingsAverage);
     });
 }
+
