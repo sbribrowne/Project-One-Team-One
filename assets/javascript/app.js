@@ -21,17 +21,24 @@ $(document).ready(function(){
 
     	titleUPC.done(function(response) {
         	a = {
-	            title: response.items[0].name,
-	            UPC:  response.items[0].upc 
+				title: response.items[0].name,
+				UPC:  response.items[0].upc,
+				description: response.items[0].longDescription,
+				imageURL: response.items[0].largeImage
 	        }  
 
 	        //display description and photo from BestBuy.js
-	        $("#prod-title").html(a.title);
+			$("#prod-title").html(`${a.title} - ${a.UPC}`);
+			$("#prod-description").html(`<p id="prod-image"><img src="${a.imageURL}" alt="${a.title}" /></p>`);
+			$("#prod-description").append(`<p>${a.description}</p>`);
 	        // console.log(a);
 	        console.log(a.UPC);
 			console.log(a.title);
+			console.log(a.description);
+			console.log(a.imageURL);
 			
-			var BestBuyResponse = searchBestBuy("811571016518");
+		/*
+			var BestBuyResponse = searchBestBuy(a.UPC);
             var BestBuyObject = {};
 
             BestBuyResponse.done(function(response) {
@@ -43,8 +50,13 @@ $(document).ready(function(){
 
                 console.log(BestBuyObject.name);
                 console.log(BestBuyObject.description);
-                console.log(BestBuyObject.imageURL);
-            });
+				console.log(BestBuyObject.imageURL);
+
+				$("#prod-description").html(`<p id="prod-image"><img src="${BestBuyObject.imageURL}" alt="${BestBuyObject.name}" /></p>`);
+				$("#prod-description").append(`<p>${BestBuyObject.description}</p>`);
+			
+			});
+		*/
 
         	var youtube = getVideo(a.title);
 			youtube.done(function(response) {
