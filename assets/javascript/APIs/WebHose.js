@@ -17,12 +17,12 @@ function getReviews(productTitle) {
     var timeStamp = moment().subtract(30, "days");
 
 
-    const requestURL = "http://webhose.io/reviewFilter?token=6580ba1e-e42f-4c2c-88a2-3d7a98ef6ffd&format=json&ts=" + timeStamp + "&sort=rating&q=language%3Aenglish%20item.title:" + searchReviews + "";
-    console.log(requestURL);
+    const requestURLWebhose = "http://webhose.io/reviewFilter?token=6580ba1e-e42f-4c2c-88a2-3d7a98ef6ffd&format=json&ts=" + timeStamp + "&sort=rating&q=language%3Aenglish%20item.title:" + searchReviews + "";
+    console.log(requestURLWebhose);
 
 
-    return $.ajax({
-        url: requestURL,
+    $.ajax({
+        url: requestURLWebhose,
         method: "GET"
     }).done((response) => {
         console.log("response: " + response);
@@ -64,25 +64,17 @@ function getReviews(productTitle) {
         for(var x=0; x<reviewRatings.length; x++){
             counter += reviewRatings[x];
 
-        /*  DISPLAY RESULTS IN DOM
+          //DISPLAY RESULTS IN DOM
             var p = $("<p>");
             p.append("Source " + (x +1) + ": " + reviewSources[x] + " <br />");
             p.append("Rating: " + reviewRatings[x] + " <br />");
             p.append(reviewTexts[x] + " ");
-            $("#results").append(p);
-        */
+            $("#ratings").append(p);
+            console.log(p);
+        
         }
         var ratingsAverage = counter / reviewRatings.length;
         
         console.log("avg: " + ratingsAverage);
-
-        return  {
-            sources: reviewSources,
-            texts:  reviewTexts,
-            ratings: reviewRatings
-        }
-
-       // $("#results").append(reviewSources);
-
     });
 }
