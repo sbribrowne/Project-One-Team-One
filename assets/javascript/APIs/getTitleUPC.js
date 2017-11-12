@@ -19,6 +19,7 @@ function getTitleUPC(searchQuery) {
         return  {
             title: response.items[0].name,
             UPC:  response.items[0].upc,
+            rating: response.items[0].customerRating,
             description: response.items[0].longDescription,
             imageURL: response.items[0].largeImage
         }
