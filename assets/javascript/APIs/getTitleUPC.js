@@ -1,9 +1,8 @@
 function getTitleUPC(searchQuery) {
     if (!searchQuery) 
-        return; 
+        return Promise.reject("pass in something"); 
 
     const requestURL = `http://api.walmartlabs.com/v1/search?query=${searchQuery}&format=json&apiKey=rqwj3h4qjprfdnuzvsn3cz4m`; 
-   var result = {title: "", UPC: "" };
 
     // ===============CORS CODE=========================================
     jQuery.ajaxPrefilter(function(options) {
@@ -13,15 +12,18 @@ function getTitleUPC(searchQuery) {
     });
     // =================================================================        
 
-    $.ajax({
+    return $.ajax({
         url: requestURL,
         method: "GET"
-    }).done(function(response) {
+    }).done((response) => {
+        return  {
+            title: response.items[0].name,
+            UPC:  response.items[0].upc,
+            rating: response.items[0].customerRating,
+            description: response.items[0].longDescription,
+            imageURL: response.items[0].largeImage
+        }
 
         console.log(response);
-        result.title = response.items[0].name;
-        result.UPC = response.items[0].upc;                    
     });
-
-    return result;
 }

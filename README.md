@@ -61,3 +61,10 @@ Product{
 2. Search by UPC on bestbuy
     populate object keys
 3. Object is passed to Webhose
+
+### Workaround for passing data between APIS
+1. getUPC stored in firebase
+
+2. when firebase.UPC changes
+	a. call BestBuy
+	b. call webhose
