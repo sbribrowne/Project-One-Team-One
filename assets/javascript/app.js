@@ -1,6 +1,5 @@
-
-
- var a = {} // Sets our global object for passing information generated from our AJAX calls to Walmart API
+var a = {}
+var result = {}
 
 $(document).ready(function(){
 
@@ -60,26 +59,43 @@ $(document).ready(function(){
 
         	var youtube = getVideo(a.title);
 			youtube.done(function(response) {
-				//console.log(response.items[0].id.videoId);                 
-			});
+		
+			var video = response.items[0].id.videoId;
+			console.log(video); 
 
+			$("#videos").html("<object data='http://www.youtube.com/embed/" + video + "' width='500' height='300'></object>")
 
+			//var prodtitle = JSON.stringify(a.title);
+			//console.log(prodtitle);
+			//var webhose = getReviews(searchQuery);
+			//webhose.done(function (response) {
 
-	    });
-    
+				//result = { 
+       //  			title: response.reviews[0].item.title, 
+       //  			site: response.reviews[0].item.site_full,
+       //  			reviewText: response.reviews[0].text
+    			// }
+
+        	console.log(response);
+        	console.log(result); 
+
+        });
+
+		});
+
+		});
+
+	});
+ });   
     	
     	
 		//display description and photo from BustBuy.js
-		$("#prod-title").html(""); //pass in title variable from BestBuy.js
-		$("#prod-description").html(""); //pass in description variable from BestBuy.js
-		$("#prod-image").html(""); //pass in image variable from BestBuy.js
+		//$("#prod-title").html(""); //pass in title variable from BestBuy.js
+		//$("#prod-description").html(""); //pass in description variable from BestBuy.js
+		//$("#prod-image").html(""); //pass in image variable from BestBuy.js
 
 		//display ratings from WebHose.js
-		$("#ratings").html(""); //pass in variable from Webhose.js
+		//$("#ratings").html(""); //pass in variable from Webhose.js
 
 		//display videos from Youtube.js
- 		$("#videos").html("") //pass in object variable from Youtube API
-
- 	})
-
-  });
+ 		//$("#videos").html("") //pass in object variable from Youtube API

@@ -4,7 +4,7 @@ function getReviews(searchQuery) {
     
 
     //Trims the users search input    
-    var searchTrim = searchQuery.trim();
+    var searchTrim = str.trim();
     console.log(searchTrim);
 
 
@@ -80,3 +80,4 @@ function getReviews(searchQuery) {
 
     });
 }
+
