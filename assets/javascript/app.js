@@ -12,6 +12,7 @@ $(document).ready(function () {
 		$("#prod-title").empty();
 		$("#prod-description").empty();
 		$("#ratings").empty();
+		$("#videos").empty();
 
 
 		var searchQuery = $("#product-input").val().trim();
