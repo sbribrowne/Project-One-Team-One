@@ -2,14 +2,8 @@ function getReviews(searchQuery) {
     if (!searchQuery)
         return;
 
-
-    //Trims the users search input    
-    var searchTrim = searchQuery.trim();
-    console.log(searchTrim);
-
-
-    //Then encodes the trim to fit Webhose's URI structure
-    var searchReviews = encodeURIComponent(searchTrim);
+    //Encodes the trimmed searchQuery to fit Webhose's URI structure
+    var searchReviews = encodeURIComponent(searchQuery);
     console.log("search reviews: " + searchReviews);
 
 
@@ -21,60 +15,9 @@ function getReviews(searchQuery) {
     console.log(requestURLWebhose);
 
 
-    $.ajax({
+    return $.ajax({
         url: requestURLWebhose,
         method: "GET"
-    }).done(function (response) {
-        console.log(response);
-
-        if (response.reviews.length > 0) { //Is there a result?
-            var reviewSources = [];
-            reviewSources[0] = response.reviews[0].item.site; // Assigning the first review site to first index
-            var reviewTexts = [];
-            reviewTexts[0] = response.reviews[0].text; //Assigning first review to first index
-            var reviewRatings = [];
-            reviewRatings[0] = response.reviews[0].rating; //Assigning first review rating to first index
-
-            var placeholderSource = response.reviews[0].item.site; //Stores the first review site
-
-            for (var i = 0; i < response.reviews.length; i++) {
-                console.log(response.reviews[i].item.title + " " + response.reviews[i].item.site);
-
-                if (response.reviews[i].item.site !== placeholderSource) { //Checks that the current review is not the same source as the first review
-                    reviewSources.push(response.reviews[i].item.site);
-                    reviewTexts.push(response.reviews[i].text);
-                    reviewRatings.push(response.reviews[i].rating);
-
-                    placeholderSource = response.reviews[i].item.site; //Sets the "first" source to the current source
-                }
-
-                if (reviewSources.length >= 3) break; //Stops the loop after 3 sources
-            }
-
-            console.log("Sources array: " + reviewSources);
-            console.log(reviewTexts);
-            console.log(reviewRatings);
-
-            var counter = 0;
-            for (var x = 0; x < reviewRatings.length; x++) {
-                counter += reviewRatings[x];
-
-                //DISPLAY RESULTS IN DOM
-                $("#webhose-reviews").append("<h5>Review #"+ (x + 1) + "</h5>");
-
-                var p = $("<p>")
-                p.append("Source: " + reviewSources[x] + " <br />");
-                p.append("Customer Rating: " + reviewRatings[x] + " <br />");
-                p.append(reviewTexts[x]);
-                $("#webhose-reviews").append(p);
-
-                var p = $("<p>")
-            }
-
-        } else { //no result
-            console.log("webhose did not find nothin'.");
-            alert("webhose did not find nothin'.");
-        }
-    });
+    })
 }
 
