@@ -31,40 +31,27 @@ The techGine project provides a one-stop platform allowing users to research and
 ![Project Review Page Wireframe](assets/images/productpage-01.png)
 
 ## APIs in Use:
-* Best Buy API
-* News API
-* Twitter API
 * Walmart API
+* Webhose API
 * Youtube API
 
 ## Project Task Breakdown:
 
-* **Web-page design and styling**: Alize (Nick as needed)
-* **Best Buy API Javascript and UPC generation**: Mark
-* **News API and Twitter API Javascript**: Sade
-* **Walmart API and YouTube API Javascript**: Jenn
-* **WebHose API Javascript**: Nick
+* **Frontend: Web Design**: Alize (Nick as needed)
+* **Backend: System Integration and Testing**: Mark
+* **Backend: App.js and Integration**: Sade
+* **Backend: Walmart and Youtube API**: Jenn
+* **Backend: WebHose API and integration**: Nick
 
-## Code Notes
-Propsed product object:
-Product{
-        name
-        imageURL
-        description
-        releaseDate
-        productRating
-        reviewsNum
-        UPC
-    }
+## Code Notes (Flow)
 
-1. UPC from Walmart
-2. Search by UPC on bestbuy
-    populate object keys
-3. Object is passed to Webhose
+1. User search input
+2. Walmart API for product info
+3. Webhose API for reviews and rating
+4. Youtube API for video reviews
 
-### Workaround for passing data between APIS
-1. getUPC stored in firebase
-
-2. when firebase.UPC changes
-	a. call BestBuy
-	b. call webhose
+### Project Obstacles
+* API availability and usage
+* Identical product availability
+* Asynchronous programming
+* Cross-origin resource sharing
