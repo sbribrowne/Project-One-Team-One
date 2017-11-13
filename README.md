@@ -1,6 +1,6 @@
 # Project: **techGine** -- Tech Product Review Search Aggregate
 
-![techGine](assets/images/techGinelogo.png)
+![techGine](assets/images/techGinelogo1.png)
 
 ## Contents:
 * [Team Members](#team-members)
@@ -19,7 +19,7 @@ ___
 
 ## Project Description:
 
-Our techGine project provides a one-stop platform allowing users to research and compare electronic and tech products across an array of sources. Users can use the website to aggregate product searches and generate reviews at ease. Reviews include customer ratings from Best Buy, Walmart, and Amazon, as well as YouTube videos, news articles, and trending tweets from Twitter.
+The techGine project provides a one-stop platform allowing users to research and compare electronic and tech products across an array of sources. Users can use the website to aggregate product searches and generate reviews at ease. Reviews include customer ratings from Best Buy, Walmart, and Amazon, as well as YouTube videos, news articles, and trending tweets from Twitter.
 
 ## Project Design:
 
