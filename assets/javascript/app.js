@@ -1,92 +1,102 @@
 var a = {}
-var result = {}
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 
-	// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-	$('#search').modal();
+	//Adds an id to the modal to manipulate
+	$("#search").modal();
 
+	//On click function
 	$("#search").on("click", function () {
 		event.preventDefault();
 		$("#prod-title").empty();
 		$("#prod-description").empty();
-		$("#ratings").empty();
+		$("#webhose-reviews").empty();
+		$("#walmart-ratings").empty();
 		$("#videos").empty();
 
-
+		//stores the User's search
 		var searchQuery = $("#product-input").val().trim();
-		//console.log(searchQuery);
 
-		//display title from getTitleUPC
-
-
-		var titleUPC = getTitleUPC(searchQuery);
+		//Stores and then passes the User's search through the Walmart AJAX (getTitle.js) function
+		var titleUPC = getTitle(searchQuery);
 
 		titleUPC.done(function (response) {
 			a = {
 				title: response.items[0].name,
-				UPC: response.items[0].upc,
 				rating: response.items[0].customerRating,
 				description: response.items[0].longDescription,
 				imageURL: response.items[0].largeImage
 			}
 
-			//display description and photo from BestBuy.js
-			$("#prod-title").html(`${a.title} - ${a.UPC}`);
+			//Removes random html tags that may show up from Walmart descriptions
+			function removeSpecialChars(str) {
+				return str.replace(/(<([^>]+)>)/ig, "")
+					.replace(/&lt;/g, "")
+					.replace(/&gt;/g, "");
+			};
+
+			var trimmedDescript = removeSpecialChars(a.description);
+
+			//Display description and photo from Walmart AJAX (getTitle.js)
+			$("#prod-title").html(`${a.title}`);
 			$("#prod-description").html(`<p id="prod-image"><img src="${a.imageURL}" alt="${a.title}" /></p>`);
-			$("#prod-description").append(`<p>${a.description}</p>`);
-			$("#prod-wallyRate").append(`<p>Total Avg Customer Rating: ${a.rating}</p>`);
-			// console.log(a);
-			console.log(a.UPC);
-			console.log(a.title);
-			console.log(a.rating);
-			console.log(a.description);
-			console.log(a.imageURL);
+			$("#prod-description").append(`<h5>Product Description:</h5> <p>${trimmedDescript}</p>`);
 
-			getReviews(searchQuery); //Runs Webhose.js, displays results in DOM.
+			if (a.rating === undefined) {
+				$("#walmart-ratings").html(`<h5>No average rating to show, sorry!</h5>`);
+			} else {
+				$("#walmart-ratings").html(`<h5>Total Avg Customer Rating: ${a.rating}</h5>`);
+			};
 
-			/*
-				var BestBuyResponse = searchBestBuy(a.UPC);
-				var BestBuyObject = {};
-	
-				BestBuyResponse.done(function(response) {
-					BestBuyObject = {
-						name: response.products[0].name,
-						imageURL:  response.products[0].image,
-						description: response.products[0].longDescription
-					}  
-	
-					console.log(BestBuyObject.name);
-					console.log(BestBuyObject.description);
-					console.log(BestBuyObject.imageURL);
-	
-					$("#prod-description").html(`<p id="prod-image"><img src="${BestBuyObject.imageURL}" alt="${BestBuyObject.name}" /></p>`);
-					$("#prod-description").append(`<p>${BestBuyObject.description}</p>`);
-				
-				});
-			*/
+			console.log(a);
 
-			/*
-				var BestBuyResponse = searchBestBuy(a.UPC);
-				var BestBuyObject = {};
-	
-				BestBuyResponse.done(function(response) {
-					BestBuyObject = {
-						name: response.products[0].name,
-						imageURL:  response.products[0].image,
-						description: response.products[0].longDescription
-					}  
-	
-					console.log(BestBuyObject.name);
-					console.log(BestBuyObject.description);
-					console.log(BestBuyObject.imageURL);
-	
-					$("#prod-description").html(`<p id="prod-image"><img src="${BestBuyObject.imageURL}" alt="${BestBuyObject.name}" /></p>`);
-					$("#prod-description").append(`<p>${BestBuyObject.description}</p>`);
-				
-				});
-			*/
+
+
+
+			//Runs Webhose.js, displays results in DOM.
+			var webhose = getReviews(searchQuery);
+
+			webhose.done(function (response) {
+				console.log(response);
+
+				if (response.reviews.length > 0) { //Is there a result?
+					var reviewSources = [];
+					reviewSources[0] = response.reviews[0].item.site; // Assigning the first review site to first index
+					var reviewTexts = [];
+					reviewTexts[0] = response.reviews[0].text; //Assigning first review to first index
+					var reviewRatings = [];
+					reviewRatings[0] = response.reviews[0].rating; //Assigning first review rating to first index
+
+					var placeholderSource = response.reviews[0].item.site; //Stores the first review site
+
+					for (var i = 0; i < response.reviews.length; i++) {
+
+						if (response.reviews[i].item.site !== placeholderSource) { //Checks that the current review is not the same source as the first review
+							reviewSources.push(response.reviews[i].item.site);
+							reviewTexts.push(response.reviews[i].text);
+							reviewRatings.push(response.reviews[i].rating);
+
+							placeholderSource = response.reviews[i].item.site; //Sets the "first" source to the current source
+						}
+
+						if (reviewSources.length >= 3) break; //Stops the loop after 3 sources
+					}
+
+					var counter = 0;
+					for (var x = 0; x < reviewRatings.length; x++) {
+						counter += reviewRatings[x];
+
+						//DISPLAY RESULTS IN DOM
+						$("#webhose-reviews").append("<h5>Review #" + (x + 1) + "</h5 <br /> <p>Source: " + reviewSources[x] + " <br /><p>Customer Rating: " + reviewRatings[x] + " <br /><p>" + reviewTexts + "");
+
+					}
+
+				} else { //no result
+					console.log("webhose did not find nothin'.");
+					$("#webhose-reviews").html("<h5>Sorry, Webhose has no reviews for you right now! #sad</h5>");
+				}
+			});
 
 			var youtube = getVideo(searchQuery);
 			youtube.done(function (response) {
@@ -96,27 +106,10 @@ $(document).ready(function() {
 				var video1 = response.items[0].id.videoId;
 				var video2 = response.items[1].id.videoId;
 				var video3 = response.items[2].id.videoId;
-				console.log(video1);
-				console.log(video2);
-				console.log(video3);
 
-				$("#videos").html("<object data='http://www.youtube.com/embed/" + video1 + "' width='500' height='300'></object>");
-				$("#videos-1").html("<object data='http://www.youtube.com/embed/" + video2 + "' width='500' height='300'></object>");
-				$("#videos-2").html("<object data='http://www.youtube.com/embed/" + video3 + "' width='500' height='300'></object>")
-
-				//var prodtitle = JSON.stringify(a.title);
-				//console.log(prodtitle);
-				//var webhose = getReviews(searchQuery);
-				//webhose.done(function (response) {
-
-				//result = { 
-				//  			title: response.reviews[0].item.title, 
-				//  			site: response.reviews[0].item.site_full,
-				//  			reviewText: response.reviews[0].text
-				// }
-
-				console.log(response);
-				console.log(result);
+				$("#videos-1").html("<object data='http://www.youtube.com/embed/" + video1 + "' width='500' height='300'></object>");
+				$("#videos-2").html("<object data='http://www.youtube.com/embed/" + video2 + "' width='500' height='300'></object>");
+				$("#videos-3").html("<object data='http://www.youtube.com/embed/" + video3 + "' width='500' height='300'></object>")
 
 			});
 
@@ -125,14 +118,3 @@ $(document).ready(function() {
 	});
 
 });
-
-		//display description and photo from BustBuy.js
-		//$("#prod-title").html(""); //pass in title variable from BestBuy.js
-		//$("#prod-description").html(""); //pass in description variable from BestBuy.js
-		//$("#prod-image").html(""); //pass in image variable from BestBuy.js
-
-		//display ratings from WebHose.js
-		//$("#ratings").html(""); //pass in variable from Webhose.js
-
-		//display videos from Youtube.js
- 		//$("#videos").html("") //pass in object variable from Youtube API

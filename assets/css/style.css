@@ -208,6 +208,7 @@ h1, h2, h3 {
 /* MODAL UPDATE */
 #modal1 {
     width: 90%;
+    text-align: center;
 }
 
 /* MEDIA QUERY: applies to width of 640px */
