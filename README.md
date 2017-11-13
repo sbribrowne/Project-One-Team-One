@@ -1,6 +1,8 @@
 # Project: **techGine** -- Tech Product Review Search Aggregate
 
-![techGine](assets/images/techGinelogo1.png)
+<p align="center">
+    <img src="assets/images/techGinelogo1.png">
+</p>
 
 ## Contents:
 * [Team Members](#team-members)
