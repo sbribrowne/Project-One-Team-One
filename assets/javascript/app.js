@@ -3,9 +3,10 @@ var a = {}
 $(document).ready(function () {
 
 
-	// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+	//Adds an id to the modal to manipulate
 	$("#search").modal();
 
+	//On click function
 	$("#search").on("click", function () {
 		event.preventDefault();
 		$("#prod-title").empty();
@@ -14,14 +15,10 @@ $(document).ready(function () {
 		$("#walmart-ratings").empty();
 		$("#videos").empty();
 
-
+		//stores the User's search
 		var searchQuery = $("#product-input").val().trim();
 
-		//console.log(searchQuery);
-
-		//display title from getTitle
-
-
+		//Stores and then passes the User's search through the Walmart AJAX (getTitle.js) function
 		var titleUPC = getTitle(searchQuery);
 
 		titleUPC.done(function (response) {
@@ -32,16 +29,16 @@ $(document).ready(function () {
 				imageURL: response.items[0].largeImage
 			}
 
+			//Removes random html tags that may show up from Walmart descriptions
 			function removeSpecialChars(str) {
-				return str.replace(/&lt;/g, "")
-					.replace(/&gt;/g, "")
-					
+				return str.replace(/(<([^>]+)>)/ig, "")
+					.replace(/&lt;/g, "")
+					.replace(/&gt;/g, "");
 			};
 
 			var trimmedDescript = removeSpecialChars(a.description);
-			alert(trimmedDescript);
 
-			//display description and photo from BestBuy.js
+			//Display description and photo from Walmart AJAX (getTitle.js)
 			$("#prod-title").html(`${a.title}`);
 			$("#prod-description").html(`<p id="prod-image"><img src="${a.imageURL}" alt="${a.title}" /></p>`);
 			$("#prod-description").append(`<h5>Product Description:</h5> <p>${trimmedDescript}</p>`);
@@ -52,18 +49,13 @@ $(document).ready(function () {
 				$("#walmart-ratings").html(`<h5>Total Avg Customer Rating: ${a.rating}</h5>`);
 			};
 
-
-
-			// console.log(a);
-			console.log(a.title);
-			console.log(a.rating);
-			console.log(a.description);
-			console.log(a.imageURL);
+			console.log(a);
 
 
 
 
-			var webhose = getReviews(searchQuery); //Runs Webhose.js, displays results in DOM.
+			//Runs Webhose.js, displays results in DOM.
+			var webhose = getReviews(searchQuery);
 
 			webhose.done(function (response) {
 				console.log(response);
@@ -79,7 +71,6 @@ $(document).ready(function () {
 					var placeholderSource = response.reviews[0].item.site; //Stores the first review site
 
 					for (var i = 0; i < response.reviews.length; i++) {
-						console.log(response.reviews[i].item.title + " " + response.reviews[i].item.site);
 
 						if (response.reviews[i].item.site !== placeholderSource) { //Checks that the current review is not the same source as the first review
 							reviewSources.push(response.reviews[i].item.site);
@@ -92,10 +83,6 @@ $(document).ready(function () {
 						if (reviewSources.length >= 3) break; //Stops the loop after 3 sources
 					}
 
-					console.log("Sources array: " + reviewSources);
-					console.log(reviewTexts);
-					console.log(reviewRatings);
-
 					var counter = 0;
 					for (var x = 0; x < reviewRatings.length; x++) {
 						counter += reviewRatings[x];
@@ -103,18 +90,11 @@ $(document).ready(function () {
 						//DISPLAY RESULTS IN DOM
 						$("#webhose-reviews").append("<h5>Review #" + (x + 1) + "</h5 <br /> <p>Source: " + reviewSources[x] + " <br /><p>Customer Rating: " + reviewRatings[x] + " <br /><p>" + reviewTexts + "");
 
-						/*var p = $("<p>")
-						p.append("Source: " + reviewSources[x] + " <br />");
-						p.append("Customer Rating: " + reviewRatings[x] + " <br />");
-						p.append(reviewTexts[x]);
-						$("#webhose-reviews").append(p);
-
-						var p = $("<p>")*/
 					}
 
 				} else { //no result
 					console.log("webhose did not find nothin'.");
-					alert("webhose did not find nothin'.");
+					$("#webhose-reviews").html("<h5>Sorry, Webhose has no reviews for you right now! #sad</h5>");
 				}
 			});
 
@@ -126,16 +106,10 @@ $(document).ready(function () {
 				var video1 = response.items[0].id.videoId;
 				var video2 = response.items[1].id.videoId;
 				var video3 = response.items[2].id.videoId;
-				console.log(video1);
-				console.log(video2);
-				console.log(video3);
 
 				$("#videos-1").html("<object data='http://www.youtube.com/embed/" + video1 + "' width='500' height='300'></object>");
 				$("#videos-2").html("<object data='http://www.youtube.com/embed/" + video2 + "' width='500' height='300'></object>");
 				$("#videos-3").html("<object data='http://www.youtube.com/embed/" + video3 + "' width='500' height='300'></object>")
-
-
-				console.log(response);
 
 			});
 

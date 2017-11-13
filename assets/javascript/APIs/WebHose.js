@@ -4,7 +4,6 @@ function getReviews(searchQuery) {
 
     //Encodes the trimmed searchQuery to fit Webhose's URI structure
     var searchReviews = encodeURIComponent(searchQuery);
-    console.log("search reviews: " + searchReviews);
 
 
     //Creates a timestamp using moment.js 30 days from the moment of the search to give us the max number of days of Webhose's scraped reviews 
@@ -12,7 +11,6 @@ function getReviews(searchQuery) {
 
 
     const requestURLWebhose = "http://webhose.io/reviewFilter?token=6580ba1e-e42f-4c2c-88a2-3d7a98ef6ffd&format=json&ts=" + timeStamp + "&sort=rating&q=language%3Aenglish%20item.title:" + searchReviews + "";
-    console.log(requestURLWebhose);
 
 
     return $.ajax({
