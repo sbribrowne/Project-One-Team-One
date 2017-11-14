@@ -107,17 +107,6 @@ h1, h2, h3 {
     background-color: #8DB5C5;
 }
 
-/*Nav Bar - auto fill */
-#topbarsearch .input-field .prefix { 
-    width:0rem !important;    
-    }        
-#topbarsearch nav ul li:hover, nav ul li.active {
-        background-color: none !important;
-    }
-.input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content{
-    margin-left: 1rem !important;
-    }
-
 /*About Section*/
 
 .about-title {
