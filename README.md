@@ -47,6 +47,10 @@ The techGine project provides a one-stop platform allowing users to research and
 
 ## Code Notes (Flow)
 
+<p align="center">
+    <img src="assets/images/techGine-Project-Flow-Chart.jpg">
+</p>
+
 1. User search input
 2. Walmart API for product info
 3. Webhose API for reviews and rating
