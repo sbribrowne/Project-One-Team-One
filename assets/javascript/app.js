@@ -85,11 +85,7 @@ $(document).ready(function () {
 						counter += reviewRatings[x];
 
 						//DISPLAY RESULTS IN DOM
-<<<<<<< HEAD
 						$("#webhose-reviews").append("<h5 id='review-title'>Review #" + (x + 1) + "</h5 <br /> <p class='review-text'>Source: " + reviewSources[x] + " <br /><p class='review-text'>Customer Rating: " + reviewRatings[x] + " <br /><p class='review-text'>" + reviewTexts + "");
-=======
-						$("#webhose-reviews").append("<h5>Review #" + (x + 1) + "</h5 <br /> <p>Source: " + reviewSources[x] + " <br /><p>Customer Rating: " + reviewRatings[x] + " <br /><p>" + reviewTexts[x] + "");
->>>>>>> upstream/master
 
 					}
 
