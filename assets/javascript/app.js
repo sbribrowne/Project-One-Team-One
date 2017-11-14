@@ -41,7 +41,7 @@ $(document).ready(function () {
 			//Display description and photo from Walmart AJAX (getTitle.js)
 			$("#prod-title").html(`${a.title}`);
 			$("#prod-description").html(`<p id="prod-image"><img src="${a.imageURL}" alt="${a.title}" /></p>`);
-			$("#prod-description").append(`<h5>Product Description:</h5> <p>${trimmedDescript}</p>`);
+			$("#prod-description").append(`<p id="product-description">Product Description</p> <p id="description-paragraph">${trimmedDescript}</p>`);
 
 			if (a.rating === undefined) {
 				$("#walmart-ratings").html(`<h5>No average rating to show, sorry!</h5>`);
@@ -88,7 +88,7 @@ $(document).ready(function () {
 						counter += reviewRatings[x];
 
 						//DISPLAY RESULTS IN DOM
-						$("#webhose-reviews").append("<h5>Review #" + (x + 1) + "</h5 <br /> <p>Source: " + reviewSources[x] + " <br /><p>Customer Rating: " + reviewRatings[x] + " <br /><p>" + reviewTexts + "");
+						$("#webhose-reviews").append("<h5 id='review-title'>Review #" + (x + 1) + "</h5 <br /> <p class='review-text'>Source: " + reviewSources[x] + " <br /><p class='review-text'>Customer Rating: " + reviewRatings[x] + " <br /><p class='review-text'>" + reviewTexts + "");
 
 					}
 

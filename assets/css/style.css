@@ -222,11 +222,41 @@ h1, h2, h3 {
     clear: both;
 }
 
+.review-text {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
 #modal1 {
     width: 90%;
     text-align: center;
     padding: none;
     height: 100%;
+}
+
+#product-description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 2%;
+}
+
+#description-paragraph {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#review-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 2%;
 }
 
 #videos-1{
