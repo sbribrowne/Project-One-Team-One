@@ -47,12 +47,17 @@ The techGine project provides a one-stop platform allowing users to research and
 
 ## Code Notes (Flow)
 
-1. User search input
-2. Walmart API for product info
-3. Webhose API for reviews and rating
-4. Youtube API for video reviews
+<p align="center">
+    <img src="assets/images/techGine-Project-Flow-Chart.jpg">
+</p>
 
-### Project Obstacles
+1. User search input
+2. Result pops up in Modal
+    * Walmart API for product info
+    * Webhose API for reviews and rating
+    * Youtube API for video reviews
+
+## Project Obstacles
 * API availability and usage
 * Identical product availability
 * Asynchronous programming
