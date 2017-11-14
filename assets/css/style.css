@@ -162,7 +162,14 @@ h1, h2, h3 {
 #footer {
     background-color: #CB3526;
     padding-bottom: 1.5%; 
-    margin-top: 3%;
+    margin-top: 3.5%;
+}
+#footer-repo {
+    color: white;
+}
+
+#footer-repo:hover {
+    color: #8DB5C5;
 }
 
 /*---------------------------TEAM PAGE ------------------------------------*/
