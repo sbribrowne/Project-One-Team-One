@@ -10,6 +10,8 @@
 * [Project Design](#project-design)
 * [APIs in Use](#apis-in-use)
 * [Project Task Breakdown](#project-task-breakdown)
+* [Flow Chart](#flow-chart)
+* [Project Obstacles](#project-obstacles)
 ___
 
 ## Team Members:
@@ -45,7 +47,7 @@ The techGine project provides a one-stop platform allowing users to research and
 * **Backend: Walmart and Youtube API**: Jenn
 * **Backend: WebHose API and integration**: Nick
 
-## Code Notes (Flow)
+## Flow Chart
 
 <p align="center">
     <img src="assets/images/techGine-Project-Flow-Chart.jpg">
