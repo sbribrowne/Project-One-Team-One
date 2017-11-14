@@ -107,9 +107,9 @@ $(document).ready(function () {
 				var video2 = response.items[1].id.videoId;
 				var video3 = response.items[2].id.videoId;
 
-				$("#videos-1").html("<object data='http://www.youtube.com/embed/" + video1 + "' width='500' height='300'></object>");
-				$("#videos-2").html("<object data='http://www.youtube.com/embed/" + video2 + "' width='500' height='300'></object>");
-				$("#videos-3").html("<object data='http://www.youtube.com/embed/" + video3 + "' width='500' height='300'></object>")
+				$("#videos-1").html("<object data='http://www.youtube.com/embed/" + video1 + "' width='400' height='240'></object>");
+				$("#videos-2").html("<object data='http://www.youtube.com/embed/" + video2 + "' width='400' height='240'></object>");
+				$("#videos-3").html("<object data='http://www.youtube.com/embed/" + video3 + "' width='400' height='240'></object>")
 
 			});
 

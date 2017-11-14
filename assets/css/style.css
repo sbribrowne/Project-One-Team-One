@@ -206,10 +206,38 @@ h1, h2, h3 {
 }
 
 /* MODAL UPDATE */
+
+.modal-header {
+    display: block;
+    background-color: #005170;
+    padding: 30px 10px 15px 10px;
+    color: #FFF9EE;
+    letter-spacing: 4px;
+    line-height: 5px;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+}
+
 #modal1 {
     width: 90%;
     text-align: center;
+    padding: none;
+    height: 100%;
 }
+
+#videos-1{
+    float: left;
+}
+
+#videos-2 {
+    float: left;
+}
+
+#videos-3 {
+    float: left;
+}
+
+
 
 /* MEDIA QUERY: applies to width of 640px */
 
