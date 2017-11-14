@@ -213,7 +213,7 @@ h1, h2, h3 {
     padding: 30px 10px 15px 10px;
     color: #FFF9EE;
     letter-spacing: 4px;
-    line-height: 5px;
+    line-height: 8px;
     font-family: 'Anton', sans-serif;
     font-size: 18px;
 }
@@ -227,6 +227,14 @@ h1, h2, h3 {
     text-align: left;
     padding-left: 2%;
     padding-right: 2%;
+}
+
+.avg-rating {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+    padding: 1.5% 0% 2% 2%;
 }
 
 #modal1 {
@@ -274,7 +282,18 @@ h1, h2, h3 {
     float: left;
 }
 
+#accept {
+    background-color: #8DB5C5;
+    margin-top: 20%;
+}
 
+#done {
+    color: white;
+}
+
+#done:hover {
+    background-color: #005170
+}
 
 /* MEDIA QUERY: applies to width of 640px */
 
