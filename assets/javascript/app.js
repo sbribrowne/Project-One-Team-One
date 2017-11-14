@@ -3,11 +3,8 @@ var a = {}
 $(document).ready(function () {
 
 
-	//Adds an id to the modal to manipulate
-	$("#search").modal();
-
 	//On click function
-	$("#search").on("click", function () {
+	$("#search").click( function productSearch() {
 		event.preventDefault();
 		$("#prod-title").empty();
 		$("#prod-description").empty();
@@ -117,4 +114,13 @@ $(document).ready(function () {
 
 	});
 
+	//Trigger search when 'enter' is pressed
+	$(document).on('keyup', function (e) {
+    	if (e.keyCode == 13) {
+    		$("#search").click();
+	}
+	});
+
 });
+
+
