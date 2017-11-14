@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 
 	//=========== On click function
-	$("#search").click( function productSearch() {
+	$(".search").click( function productSearch() {
 		//Prevents page refresh on click
 		event.preventDefault();
 
@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 
 		//Stores the User's search
-		var searchQuery = $("#product-input").val().trim();
+		var searchQuery = $(".product-input").val().trim();
 
 		//Stores and then passes the User's search through the Walmart AJAX (getTitle.js) function
 		var titleUPC = getTitle(searchQuery);
@@ -124,7 +124,7 @@ $(document).ready(function () {
 	//Trigger search if 'enter' is pressed instead of clicked
 	$(document).on('keyup', function (e) {
     	if (e.keyCode == 13) {
-    		$("#search").click();
+    		$(".search").click();
 	}
 	});
 
