@@ -50,8 +50,10 @@ $(document).ready(function () {
 			$("#prod-description").append(`<p id="product-description">Product Description</p> <p id="description-paragraph">${trimmedDescript}</p>`);
 
 			if (a.rating === undefined) {
-				$("#walmart-ratings").html(`<h5 class="avg-rating">No average rating to show, sorry!</h5>`);
+				//Displays a message if there was no average rating from the API call
+				$("#walmart-ratings").html(`<h5 class="avg-rating">Sorry, no average rating to show right now! #sad</h5>`);
 			} else {
+				//Displays the average rating if there is an average rating to display
 				$("#walmart-ratings").html(`<h5 class="avg-rating">Total Avg Customer Rating: ${a.rating}</h5>`);
 			};
 
@@ -94,7 +96,7 @@ $(document).ready(function () {
 
 				} else { //Displays message if there are no results from Webhose.io
 					console.log("webhose did not find nothin'.");
-					$("#webhose-reviews").html("<h5 id='sorry-msg'>Sorry, Webhose has no reviews for you right now! #sad</h5>");
+					$("#webhose-reviews").html("<h5 id='sorry-msg'>Sorry, there are no reviews for you right now! #sad</h5>");
 				}
 			});
 
