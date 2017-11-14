@@ -219,7 +219,7 @@ h1, h2, h3 {
     padding: 30px 10px 15px 10px;
     color: #FFF9EE;
     letter-spacing: 4px;
-    line-height: 8px;
+    line-height: 200%;
     font-family: 'Anton', sans-serif;
     font-size: 18px;
 }
@@ -231,16 +231,15 @@ h1, h2, h3 {
 .review-text {
     font-family: 'Open Sans', sans-serif;
     text-align: left;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .avg-rating {
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
     font-weight: 600;
-    text-align: left;
-    padding: 1.5% 0% 2% 2%;
+    padding: 1.5% 0% 2% 3%;
 }
 
 #modal1 {
@@ -255,14 +254,27 @@ h1, h2, h3 {
     font-size: 30px;
     font-weight: 600;
     text-align: left;
-    padding-left: 2%;
+    letter-spacing: 4px;
+    padding-left: 3%;
 }
 
 #description-paragraph {
     font-family: 'Open Sans', sans-serif;
     text-align: left;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding: 0% 3% 3% 3%;
+}
+
+#webhose-reviews {
+    background-color: #F4F4F4;
+    margin-top: 0%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+#walmart-ratings {
+    margin-top: 0%;
+    padding-bottom: 3%;
+    letter-spacing: 4px;
 }
 
 #review-title {
@@ -270,7 +282,8 @@ h1, h2, h3 {
     font-size: 30px;
     font-weight: 600;
     text-align: left;
-    padding-left: 2%;
+    letter-spacing: 4px;
+    padding-left: 3%;
 }
 
 #videos-1{
