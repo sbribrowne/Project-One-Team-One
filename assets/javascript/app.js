@@ -3,11 +3,8 @@ var a = {}
 $(document).ready(function () {
 
 
-	//Adds an id to the modal to manipulate
-	$("#search").modal();
-
 	//On click function
-	$("#search").on("click", function () {
+	$("#search").click( function productSearch() {
 		event.preventDefault();
 		$("#prod-title").empty();
 		$("#prod-description").empty();
@@ -88,7 +85,11 @@ $(document).ready(function () {
 						counter += reviewRatings[x];
 
 						//DISPLAY RESULTS IN DOM
+<<<<<<< HEAD
 						$("#webhose-reviews").append("<h5 id='review-title'>Review #" + (x + 1) + "</h5 <br /> <p class='review-text'>Source: " + reviewSources[x] + " <br /><p class='review-text'>Customer Rating: " + reviewRatings[x] + " <br /><p class='review-text'>" + reviewTexts + "");
+=======
+						$("#webhose-reviews").append("<h5>Review #" + (x + 1) + "</h5 <br /> <p>Source: " + reviewSources[x] + " <br /><p>Customer Rating: " + reviewRatings[x] + " <br /><p>" + reviewTexts[x] + "");
+>>>>>>> upstream/master
 
 					}
 
@@ -117,4 +118,13 @@ $(document).ready(function () {
 
 	});
 
+	//Trigger search when 'enter' is pressed
+	$(document).on('keyup', function (e) {
+    	if (e.keyCode == 13) {
+    		$("#search").click();
+	}
+	});
+
 });
+
+
