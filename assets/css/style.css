@@ -72,19 +72,20 @@ h1, h2, h3 {
     background-color: #CB3526; 
 }
 
-#autocomplete-input {
+#nav-search-input {
     padding-left: 5%;
     color: #FFF9EE
 }
 
-#autocomplete-input:focus {
+#nav-search-input:focus {
     border-bottom-color: white;
     box-shadow: none;
 }
 
-#autocomplete-input::placeholder {
+#nav-search-input::placeholder {
     color: #FFF9EE;
     font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
     padding-left: 5%;
   }
 
