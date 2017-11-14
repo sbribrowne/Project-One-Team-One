@@ -52,11 +52,12 @@ The techGine project provides a one-stop platform allowing users to research and
 </p>
 
 1. User search input
-2. Walmart API for product info
-3. Webhose API for reviews and rating
-4. Youtube API for video reviews
+2. Result pops up in Modal
+    * Walmart API for product info
+    * Webhose API for reviews and rating
+    * Youtube API for video reviews
 
-### Project Obstacles
+## Project Obstacles
 * API availability and usage
 * Identical product availability
 * Asynchronous programming
