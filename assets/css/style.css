@@ -72,6 +72,11 @@ h1, h2, h3 {
     background-color: #CB3526; 
 }
 
+#autocomplete-input {
+    padding-left: 5%;
+    color: #FFF9EE
+}
+
 #autocomplete-input:focus {
     border-bottom-color: white;
     box-shadow: none;
