@@ -38,12 +38,12 @@ $(document).ready(function () {
 			//Display description and photo from Walmart AJAX (getTitle.js)
 			$("#prod-title").html(`${a.title}`);
 			$("#prod-description").html(`<p id="prod-image"><img src="${a.imageURL}" alt="${a.title}" /></p>`);
-			$("#prod-description").append(`<h5>Product Description:</h5> <p>${trimmedDescript}</p>`);
+			$("#prod-description").append(`<p id="product-description">Product Description</p> <p id="description-paragraph">${trimmedDescript}</p>`);
 
 			if (a.rating === undefined) {
-				$("#walmart-ratings").html(`<h5>No average rating to show, sorry!</h5>`);
+				$("#walmart-ratings").html(`<h5 class="avg-rating">No average rating to show, sorry!</h5>`);
 			} else {
-				$("#walmart-ratings").html(`<h5>Total Avg Customer Rating: ${a.rating}</h5>`);
+				$("#walmart-ratings").html(`<h5 class="avg-rating">Total Avg Customer Rating: ${a.rating}</h5>`);
 			};
 
 			console.log(a);
@@ -85,13 +85,17 @@ $(document).ready(function () {
 						counter += reviewRatings[x];
 
 						//DISPLAY RESULTS IN DOM
+<<<<<<< HEAD
+						$("#webhose-reviews").append("<h5 id='review-title'>Review #" + (x + 1) + "</h5 <br /> <p class='review-text'>Source: " + reviewSources[x] + " <br /><p class='review-text'>Customer Rating: " + reviewRatings[x] + " <br /><p class='review-text'>" + reviewTexts + "");
+=======
 						$("#webhose-reviews").append("<h5>Review #" + (x + 1) + "</h5 <br /> <p>Source: " + reviewSources[x] + " <br /><p>Customer Rating: " + reviewRatings[x] + " <br /><p>" + reviewTexts[x] + "");
+>>>>>>> upstream/master
 
 					}
 
 				} else { //no result
 					console.log("webhose did not find nothin'.");
-					$("#webhose-reviews").html("<h5>Sorry, Webhose has no reviews for you right now! #sad</h5>");
+					$("#webhose-reviews").html("<h5 id='sorry-msg'>Sorry, Webhose has no reviews for you right now! #sad</h5>");
 				}
 			});
 
@@ -104,9 +108,9 @@ $(document).ready(function () {
 				var video2 = response.items[1].id.videoId;
 				var video3 = response.items[2].id.videoId;
 
-				$("#videos-1").html("<object data='http://www.youtube.com/embed/" + video1 + "' width='500' height='300'></object>");
-				$("#videos-2").html("<object data='http://www.youtube.com/embed/" + video2 + "' width='500' height='300'></object>");
-				$("#videos-3").html("<object data='http://www.youtube.com/embed/" + video3 + "' width='500' height='300'></object>")
+				$("#videos-1").html("<object data='http://www.youtube.com/embed/" + video1 + "' width='400' height='240'></object>");
+				$("#videos-2").html("<object data='http://www.youtube.com/embed/" + video2 + "' width='400' height='240'></object>");
+				$("#videos-3").html("<object data='http://www.youtube.com/embed/" + video3 + "' width='400' height='240'></object>")
 
 			});
 

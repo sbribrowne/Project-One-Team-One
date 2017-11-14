@@ -41,7 +41,7 @@ h1, h2, h3 {
 #product-input {
     width: 200px; 
     height: 100%;
-    margin-left: 40%;
+    margin-left: 41.5%;
     background-color: white;
     border-bottom: none;
     padding: 14.5px 0px 17px 10px;
@@ -61,7 +61,6 @@ h1, h2, h3 {
 #product-input::placeholder {
     font-size: 12px;
     font-family: 'Open Sans', sans-serif;
-    padding-left: 5%;
   }
 
 #product-btn:hover {
@@ -71,6 +70,11 @@ h1, h2, h3 {
 /*Nav Bar - styling */
 .nav-wrapper {
     background-color: #CB3526; 
+}
+
+#autocomplete-input {
+    padding-left: 5%;
+    color: #FFF9EE
 }
 
 #autocomplete-input:focus {
@@ -174,10 +178,16 @@ h1, h2, h3 {
 
 .card-content {
     background-color: #F0E8E7; 
+    text-align: left;
 }
 
 .card-title {
     color: white;
+    text-align: left;
+}
+
+.card-reveal {
+    text-align: left;
 }
 
 .github-link {
@@ -206,9 +216,109 @@ h1, h2, h3 {
 }
 
 /* MODAL UPDATE */
+
+.modal-header {
+    display: block;
+    background-color: #005170;
+    padding: 30px 10px 15px 10px;
+    color: #FFF9EE;
+    letter-spacing: 4px;
+    line-height: 200%;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+}
+
+.modal-footer {
+    clear: both;
+}
+
+.review-text {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.avg-rating {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 1.5% 0% 2% 3%;
+}
+
 #modal1 {
     width: 90%;
     text-align: center;
+    padding: none;
+    height: 100%;
+}
+
+#product-description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 4px;
+    padding-left: 3%;
+}
+
+#description-paragraph {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    padding: 0% 3% 3% 3%;
+}
+
+#webhose-reviews {
+    background-color: #F4F4F4;
+    margin-top: 0%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+#walmart-ratings {
+    margin-top: 0%;
+    padding-bottom: 3%;
+    letter-spacing: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#review-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 4px;
+    padding-left: 3%;
+}
+
+#videos-1{
+    float: left;
+    margin-left: 4%;
+    margin-right: 5%;
+}
+
+#videos-2 {
+    float: left;
+    margin-right: 5%;
+}
+
+#videos-3 {
+    float: left;
+}
+
+#accept {
+    background-color: #8DB5C5;
+    margin-top: 20%;
+}
+
+#done {
+    color: white;
+}
+
+#done:hover {
+    background-color: #005170
 }
 
 /* MEDIA QUERY: applies to width of 640px */
@@ -243,5 +353,9 @@ h1, h2, h3 {
 
     #team-description {
         font-size: 20px;
+    }
+
+    #videos-1{
+        margin-left: 0%;
     }
 }
