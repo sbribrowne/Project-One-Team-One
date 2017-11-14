@@ -41,7 +41,7 @@ h1, h2, h3 {
 #product-input {
     width: 200px; 
     height: 100%;
-    margin-left: 40%;
+    margin-left: 41.5%;
     background-color: white;
     border-bottom: none;
     padding: 14.5px 0px 17px 10px;
@@ -61,7 +61,6 @@ h1, h2, h3 {
 #product-input::placeholder {
     font-size: 12px;
     font-family: 'Open Sans', sans-serif;
-    padding-left: 5%;
   }
 
 #product-btn:hover {
