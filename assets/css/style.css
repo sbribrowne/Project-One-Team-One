@@ -218,6 +218,10 @@ h1, h2, h3 {
     font-size: 18px;
 }
 
+.modal-footer {
+    clear: both;
+}
+
 #modal1 {
     width: 90%;
     text-align: center;
@@ -227,10 +231,13 @@ h1, h2, h3 {
 
 #videos-1{
     float: left;
+    margin-left: 4%;
+    margin-right: 5%;
 }
 
 #videos-2 {
     float: left;
+    margin-right: 5%;
 }
 
 #videos-3 {
@@ -271,5 +278,9 @@ h1, h2, h3 {
 
     #team-description {
         font-size: 20px;
+    }
+
+    #videos-1{
+        margin-left: 0%;
     }
 }
