@@ -174,10 +174,16 @@ h1, h2, h3 {
 
 .card-content {
     background-color: #F0E8E7; 
+    text-align: left;
 }
 
 .card-title {
     color: white;
+    text-align: left;
+}
+
+.card-reveal {
+    text-align: left;
 }
 
 .github-link {
